@@ -1,0 +1,251 @@
+main {
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #111;
+    overflow: hidden;
+    /*background: #FFF url("/img/SpaceX.png");*/
+}
+
+.main-header {
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.main-header > a {
+    margin-right: 10px;
+}
+
+.blob {
+    position: absolute;
+    background: linear-gradient(90deg, teal, rebeccapurple);
+    width: 300px;
+    aspect-ratio: 1;
+    translate: -50% -50%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: blob-rotate 10s ease infinite;
+    transition: opacity 500ms ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(100px);
+}
+
+main:hover .blob {
+    opacity: 1;
+}
+
+@keyframes blob-rotate {
+    25% {
+        scale: 1 1.1;
+    }
+    50% {
+        scale: 1 1;
+    }
+    75% {
+        scale: 1.1 1;
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.glass-btn {
+    width: 200px;
+    aspect-ratio: 1;
+    position: absolute;
+}
+
+.glass-panel {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem;
+}
+
+.up {
+    inset: 75px;
+}
+
+.in {
+    left: 75px;
+    top: 350px;
+}
+
+.glass-btn > img {
+    width: 150px;
+    opacity: 0.3;
+    transition: opacity 300ms ease-in-out;
+}
+
+.glass-btn > h2 {
+    margin: 0.1rem;
+    color: #FFFFFF;
+    opacity: 0.3;
+    transition: opacity 300ms ease-in-out;
+}
+
+.glass-btn:hover > img, .glass-btn:hover > h2 {
+    opacity: 0.7;
+}
+
+.panel {
+    position: absolute;
+    top: 75px;
+    left: 350px;
+    width: 1100px;
+    height: 475px;
+    display: flex;
+    gap: 75px;
+    border: 2px solid blue;
+}
+
+.auth {
+    flex: 2;
+    width: 30%;
+    height: 475px;
+}
+
+.auth > img {
+    width: 50%;
+    opacity: 0.3;
+    transition: all 500ms ease;
+    object-fit: cover;
+}
+
+.auth:hover > img {
+    scale: 1.05;
+    opacity: 0.9;
+}
+
+.slide {
+    position: relative;
+    flex: 4;
+    width: 50%;
+    height: 475px;
+    overflow: hidden;
+}
+
+.slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* @TODO Container */
+
+.container {
+    flex-direction: row !important;
+}
+
+.authx {
+    margin: 50px 50px 0 50px;
+    width: 400px;
+    height: 550px;
+    background: #111;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.option {
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-box {
+    margin-top: 50px;
+    width: 700px;
+    height: 550px;
+    background: #111;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.desc {
+    transition: all 1s ease;
+}
+
+.desc > * {
+    margin: 0;
+    color: white;
+}
+
+.desc > h3 {
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.desc > p {
+    padding: 0 2rem 2rem 2rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.desc > img {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    float: right;
+}
+
+.container {
+    position: relative;
+}
+
+.slider {
+    margin-left: 25px;
+}
+
+.sq {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    transition: all 500ms ease;
+}
+
+.sq:hover, .active {
+    background: #FFFFFF;
+}
+
+.fade {
+    overflow: hidden;
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    25% {
+        translate: 0 100%;
+        opacity: 0;
+        scale: 92%;
+    }
+    50% {
+        opacity: 0;
+        translate: 0 -100%;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}

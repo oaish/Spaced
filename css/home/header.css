@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap');
+
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 200ms ease;
+    /*background: rgba(0,0,0);*/
+    background: #FFF;
+    text-transform: uppercase;
+}
+
+header {
+    background-image: url("../../img/SpaceX.png");
+}
+
+header > a {
+    text-decoration: none;
+    color: white;
+}
+
+#spaced {
+    margin-left: 100px;
+    width: 200px;
+}
+
+nav {
+    display: flex;
+    margin-right: 100px;
+    gap: 20px;
+}
+
+nav > button {
+    all: unset;
+    list-style: none;
+}
+
+nav > button > a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: all 200ms ease;
+}
+
+nav > button:hover {
+    border-bottom: 2px solid #1892a6;
+}

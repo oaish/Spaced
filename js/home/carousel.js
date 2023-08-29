@@ -7,7 +7,7 @@ const prevBtn = document.querySelector("#prevBtn")
 
 const slidesLength = SlideImages.length
 const dotsLength = dot.length
-let counter = 1;
+let counter = 4;
 let isChanged = false
 let isHovered = false
 const size = SlideImages[0].clientWidth;
@@ -54,15 +54,15 @@ function handleTransitionEnd() {
 Slide.addEventListener('mouseover', () => {isHovered = true})
 
 Slide.addEventListener('mouseout', () => {isHovered = false})
-
-const interval = setInterval(() => {
-    if (isHovered) return
-    if (isChanged) {
-        isChanged = false
-    } else {
-        nextBtn.click()
-    }
-}, 5 * 1000)
+//
+// const interval = setInterval(() => {
+//     if (isHovered) return
+//     if (isChanged) {
+//         isChanged = false
+//     } else {
+//         nextBtn.click()
+//     }
+// }, 5 * 1000)
 
 function getCounter(counter) {
     if (counter === 0) return dotsLength - 1

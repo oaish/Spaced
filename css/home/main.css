@@ -4,7 +4,7 @@ main {
     height: 100vh;
     position: relative;
     background: #111;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .main-header {
@@ -102,6 +102,10 @@ main:hover .blob {
     opacity: 1;
 }
 
+.container {
+    position: relative;
+}
+
 .panel {
     position: absolute;
     top: 75px;
@@ -153,106 +157,3 @@ main:hover .blob {
 
 
 
-
-/* @TODO Container */
-
-.container {
-    flex-direction: row !important;
-}
-
-.authx {
-    margin: 50px 50px 0 50px;
-    width: 400px;
-    height: 550px;
-    background: #111;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-}
-
-.option {
-
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.desc-box {
-    margin-top: 50px;
-    width: 700px;
-    height: 550px;
-    background: #111;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-}
-
-.desc {
-    transition: all 1s ease;
-}
-
-.desc > * {
-    margin: 0;
-    color: white;
-}
-
-.desc > h3 {
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: bolder;
-}
-
-.desc > p {
-    padding: 0 2rem 2rem 2rem;
-    font-size: 1.3rem;
-    text-align: justify;
-}
-
-.desc > img {
-    margin-left: 1rem;
-    margin-right: 2rem;
-    float: right;
-}
-
-.container {
-    position: relative;
-}
-
-.slider {
-    margin-left: 25px;
-}
-
-.sq {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
-    border: 2px solid white;
-    transition: all 500ms ease;
-}
-
-.sq:hover, .active {
-    background: #FFFFFF;
-}
-
-.fade {
-    overflow: hidden;
-    animation: fade 1s ease;
-}
-
-@keyframes fade {
-    25% {
-        translate: 0 100%;
-        opacity: 0;
-        scale: 92%;
-    }
-    50% {
-        opacity: 0;
-        translate: 0 -100%;
-    }
-    100% {
-        opacity: 1;
-        translate: 0 0;
-    }
-}

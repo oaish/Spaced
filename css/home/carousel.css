@@ -5,7 +5,6 @@
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(255,255,255,0.4);
-    /*justify-content: unset !important;*/
     align-items: unset !important;
 }
 
@@ -82,7 +81,6 @@
     transition: opacity 500ms ease;
     background: linear-gradient(to right, #111111, transparent);
 }
-
 
 .r-overlay {
     pointer-events: none;

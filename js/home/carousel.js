@@ -5,6 +5,7 @@ const nextBtn = document.querySelector("#nextBtn")
 const prevBtn = document.querySelector("#prevBtn")
 
 let counter = 1;
+let isChanged = false
 const size = SlideImages[0].clientWidth;
 
 Slide.style.transform = `translate(${-size * counter}px)`
@@ -14,6 +15,7 @@ nextBtn.addEventListener('click', () => {
     Slide.style.transition = 'transform 0.4s ease-in-out'
     counter++;
     Slide.style.transform = `translate(${-size * counter}px)`
+    isChanged = true
 })
 
 
@@ -22,6 +24,7 @@ prevBtn.addEventListener('click', () => {
     Slide.style.transition = 'transform 0.4s ease-in-out'
     counter--;
     Slide.style.transform = `translate(${-size * counter}px)`
+    isChanged = true
 })
 
 Slide.addEventListener('transitionend', () => {
@@ -36,3 +39,12 @@ Slide.addEventListener('transitionend', () => {
         Slide.style.transform = `translate(${-size * counter}px)`
     }
 })
+
+const interval =  setInterval(() => {
+    if (isChanged) {
+        isChanged=false
+    }
+    else {
+        nextBtn.click()
+    }
+}, 10 * 1000)

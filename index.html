@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/home/parallax.css">
     <link rel="stylesheet" href="css/home/header.css">
     <link rel="stylesheet" href="css/home/main.css">
-    <link rel="stylesheet" href="css/home/button.css">
+    <link rel="stylesheet" href="css/home/carousel.css">
     <script src="js/home/parallax.js" defer></script>
-    <!--    <script src="js/home/carousel.js" defer></script>-->
+    <script src="js/home/carousel.js" defer></script>
     <script src="js/home/blob.js" defer></script>
 </head>
 <body>
@@ -57,9 +57,23 @@
 
             </div>
 
-            <div class="slide glass-panel">
-                 
-                <img src="img/slides/BGX.jpg" alt="">
+
+            <div class="carousel-container glass-panel">
+                <div class="carousel-slide">
+                    <div class="carousel-image" id="lastClone" style="background: url('../img/slides/BBB.jpg')"></div>
+                    <div class="carousel-image" style="background: url('../img/slides/BGX.jpg')"></div>
+                    <div class="carousel-image" style="background: url('../img/slides/BGY.jpg')"></div>
+                    <div class="carousel-image" style="background: url('../img/slides/D.jpg')"></div>
+                    <div class="carousel-image" style="background: url('../img/slides/DD.jpg')"></div>
+                    <div class="carousel-image" style="background: url('../img/slides/BBB.jpg')"></div>
+                    <div class="carousel-image" id="firstClone" style="background: url('../img/slides/BGX.jpg')"></div>
+                </div>
+                <button id="nextBtn" class="slider-nav-btn">
+                    <img src="img/icon/chevron_right.svg" alt="">
+                </button>
+                <button id="prevBtn" class="slider-nav-btn">
+                    <img src="img/icon/chevron_left.svg" alt="">
+                </button>
             </div>
         </div>
 

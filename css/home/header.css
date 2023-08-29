@@ -10,7 +10,6 @@ header {
     top: 0;
     z-index: 1000;
     transition: all 200ms ease;
-    /*background: rgba(0,0,0);*/
     background: #FFF;
     text-transform: uppercase;
 }

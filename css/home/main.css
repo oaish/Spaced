@@ -4,8 +4,7 @@ main {
     height: 100vh;
     position: relative;
     background: #111;
-    overflow: hidden;
-    /*background: #FFF url("/img/SpaceX.png");*/
+    /*overflow: hidden;*/
 }
 
 .main-header {

@@ -59,6 +59,7 @@
 
 
             <div class="carousel-container glass-panel">
+                <!-- Carousel Slide Images -->
                 <div class="carousel-slide">
                     <div class="carousel-image" id="lastClone" style="background-image: url('img/slides/5.jpg')"></div>
                     <div class="carousel-image" style="background-image: url('img/slides/1.jpg')"></div>
@@ -68,14 +69,34 @@
                     <div class="carousel-image" style="background-image: url('img/slides/5.jpg')"></div>
                     <div class="carousel-image" id="firstClone" style="background-image: url('img/slides/1.jpg')"></div>
                 </div>
+                <!-- End -->
+
+                <!-- Prev/Next Nav Button -->
                 <button id="nextBtn" class="slider-nav-btn">
                     <img src="img/icon/chevron_right.svg" alt="">
                 </button>
                 <button id="prevBtn" class="slider-nav-btn">
                     <img src="img/icon/chevron_left.svg" alt="">
                 </button>
+
                 <div class="l-overlay"></div>
                 <div class="r-overlay"></div>
+                <!-- End -->
+
+                <!-- Radio Nav Buttons -->
+                <div class="slider-nav-dots">
+                    <input type="radio" name="dot" id="dotA" class="dot" onclick="setSlide(0)">
+                    <label for="dotA"></label>
+                    <input type="radio" name="dot" id="dotB" class="dot" onclick="setSlide(1)">
+                    <label for="dotB"></label>
+                    <input type="radio" name="dot" id="dotC" class="dot" onclick="setSlide(2)">
+                    <label for="dotC"></label>
+                    <input type="radio" name="dot" id="dotD" class="dot" onclick="setSlide(3)">
+                    <label for="dotD"></label>
+                    <input type="radio" name="dot" id="dotE" class="dot" onclick="setSlide(4)">
+                    <label for="dotE"></label>
+                </div>
+                <!-- End -->
             </div>
         </div>
 

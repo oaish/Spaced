@@ -5,6 +5,8 @@
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(255,255,255,0.4);
+    /*justify-content: unset !important;*/
+    align-items: unset !important;
 }
 
 .carousel-slide {
@@ -29,13 +31,14 @@
 
 .slider-nav-btn {
     all: unset;
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: 50px;
     height: 100%;
-    border-radius: 0.5rem;
     opacity: 0.5;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 0.5rem;
+    transform: translateY(-50%);
     transition: opacity 300ms ease;
 }
 
@@ -71,20 +74,60 @@
 }
 
 .l-overlay {
+    pointer-events: none;
     position: absolute;
     inset: 0;
     opacity: 0;
     z-index: 4;
     transition: opacity 500ms ease;
-    background: linear-gradient(90deg, #111111 1%, transparent);
+    background: linear-gradient(to right, #111111, transparent);
 }
 
 
 .r-overlay {
+    pointer-events: none;
     position: absolute;
     inset: 0;
     opacity: 0;
     z-index: 4;
     transition: opacity 500ms ease;
-    background: linear-gradient(-90deg, #111111 1%, transparent);
+    background: linear-gradient(to left, #111111, transparent);
+}
+
+.slider-nav-dots {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /*left: 50%;*/
+    bottom: 5%;
+    transform: translateX(10%);
+}
+
+.dot {
+    display: none;
+}
+
+.dot + label {
+    opacity: 0.5;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+.dot:checked + label {
+    opacity: 0.8;
+    border-color: transparent;
+    background-color: white;
+    width: 7px;
+    height: 7px;
+}
+
+.dot:hover + label {
+    opacity: 0.8;
 }

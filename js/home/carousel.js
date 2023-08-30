@@ -7,62 +7,54 @@ const prevBtn = document.querySelector("#prevBtn")
 
 const slidesLength = SlideImages.length
 const dotsLength = dot.length
-let counter = 4;
+let counter = 1;
 let isChanged = false
 let isHovered = false
 const size = SlideImages[0].clientWidth;
 
-Slide.style.transform = `translate(${-size * counter}px)`
 dot[getCounter(counter)].checked = true
+Slide.style.transform = `translate(${-size * counter}px)`
 
 nextBtn.addEventListener('click', handleNextClick)
 
 function handleNextClick() {
     if (counter >= slidesLength - 1) return
-    Slide.style.transition = 'transform 0.4s ease-in-out'
     counter++;
-    dot[getCounter(counter)].checked = true
-    Slide.style.transform = `translate(${-size * counter}px)`
-    isChanged = true
+    handleSlide()
 }
 
 prevBtn.addEventListener('click', handlePrevClick)
 
 function handlePrevClick() {
     if (counter <= 0) return
-    Slide.style.transition = 'transform 0.4s ease-in-out'
     counter--;
-    dot[getCounter(counter)].checked = true
-    Slide.style.transform = `translate(${-size * counter}px)`
-    isChanged = true
+    handleSlide()
 }
 
 Slide.addEventListener('transitionend', handleTransitionEnd)
 
 function handleTransitionEnd() {
     if (SlideImages[counter].id === 'firstClone') {
-        Slide.style.transition = 'none'
         counter = 1;
-        Slide.style.transform = `translate(${-size * counter}px)`
     } else if (SlideImages[counter].id === 'lastClone') {
-        Slide.style.transition = 'none'
         counter = slidesLength - 2;
-        Slide.style.transform = `translate(${-size * counter}px)`
     }
+    Slide.style.transition = 'none'
+    Slide.style.transform = `translate(${-size * counter}px)`
 }
 
 Slide.addEventListener('mouseover', () => {isHovered = true})
 
 Slide.addEventListener('mouseout', () => {isHovered = false})
-//
-// const interval = setInterval(() => {
-//     if (isHovered) return
-//     if (isChanged) {
-//         isChanged = false
-//     } else {
-//         nextBtn.click()
-//     }
-// }, 5 * 1000)
+
+const interval = setInterval(() => {
+    if (isHovered) return
+    if (isChanged) {
+        isChanged = false
+    } else {
+        nextBtn.click()
+    }
+}, 5 * 1000)
 
 function getCounter(counter) {
     if (counter === 0) return dotsLength - 1
@@ -88,4 +80,11 @@ function setSlide(index) {
         counter = index
         handleNextClick()
     }
+}
+
+function handleSlide() {
+    Slide.style.transition = 'transform 0.4s ease-in-out'
+    dot[getCounter(counter)].checked = true
+    Slide.style.transform = `translate(${-size * counter}px)`
+    isChanged = true
 }

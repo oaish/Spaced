@@ -5,16 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SPACED</title>
+    <title>SPACED | Authentication</title>
     <link rel="stylesheet" href="css/home/root.css">
     <link rel="stylesheet" href="css/home/parallax.css">
     <link rel="stylesheet" href="css/home/header.css">
     <link rel="stylesheet" href="css/home/main.css">
+    <link rel="stylesheet" href="css/home/auth.css">
     <link rel="stylesheet" href="css/home/carousel.css">
     <link rel="stylesheet" href="css/home/carousel-content.css">
     <script src="js/home/parallax.js" defer></script>
     <script src="js/home/carousel.js" defer></script>
     <script src="js/home/blob.js" defer></script>
+    <script src="js/home/auth.js" defer></script>
 </head>
 <body>
 
@@ -40,101 +42,134 @@
     <div class="blob"></div>
 
     <div class="container">
-        <div class="up glass-btn glass-panel">
-            <img draggable="false" src="img/icon/signup.svg" alt="">
-            <h2>SIGN UP</h2>
-        </div>
-        <div class="in glass-btn glass-panel">
-            <img draggable="false" src="img/icon/signin.svg" alt="">
-            <h2>SIGN IN</h2>
-        </div>
+        <div class="auth glass-panel">
+            <img draggable="false" src="img/Spaced.png" alt="Spaced Logo" id="logo">
 
-        <div class="panel">
-            <div class="auth glass-panel">
-                <div class="signup"></div>
-
-                <img draggable="false" src="img/X.png" alt="PlanetX">
-                <img draggable="false" src="img/Spaced.png" alt="Spaced Logo">
-
+            <div class="up glass-btn glass-panel">
+                <img draggable="false" src="img/icon/signup.svg" alt="">
+                <h2>SIGN UP</h2>
             </div>
 
-            <div class="carousel-container glass-panel">
-                <!-- Carousel Slide Images -->
-                <div class="carousel-slide">
-                    <div class="carousel-image sE" id="lastClone"
-                         style="background-image: url('img/slides/5.jpg')"></div>
-                    <div class="carousel-image sB" style="background-image: url('img/slides/1.jpg')">
-                        <div class="content">
-                            <h2>QUASAR</h2>
-                            <span>
+            <div class="in glass-btn glass-panel">
+                <img draggable="false" src="img/icon/signin.svg" alt="">
+                <h2>SIGN IN</h2>
+            </div>
+
+            <div class="sign-up auth-flex hidden">
+                <form action="index.html" name="sign-out" class="auth-flex">
+                    <label><input type="text" name="name" placeholder="Enter Full Name"></label>
+                    <label><input type="email" name="email" placeholder="Enter Email ID"></label>
+                    <label><input type="password" name="pass" placeholder="Enter Password"></label>
+                    <label><input type="tel" name="phone" placeholder="Enter Phone No"></label>
+                    <div>
+                        <button type="submit" id="register">Register</button>
+                        <button type="reset" id="signupBack">Back</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="sign-in auth-flex hidden">
+                <form action="pages/home.html" name="sign-in" class="auth-flex">
+                    <label><input type="email" name="emailID" placeholder="Enter Email ID"></label>
+                    <label><input type="password" name="password" placeholder="Enter Password"></label>
+                    <div>
+                        <button type="submit" id="login">Login</button>
+                        <button type="reset" id="signinBack">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="carousel-container glass-panel">
+            <!-- Carousel Slide Images -->
+            <div class="carousel-slide">
+                <div class="carousel-image sE" id="lastClone" style="background-image: url('img/slides/5.jpg')"></div>
+
+                <div class="carousel-image sB" style="background-image: url('img/slides/1.jpg')">
+                    <div class="content">
+                        <h2>QUASAR</h2>
+                        <span>
                                 Unravel the mysteries of these captivating cosmic powerhouses. Quasars, powered by
                                 supermassive black holes, emit energy equivalent to billions of stars.
                             </span>
-                            <a href="pages/home.html">
-                                <button>Learn More<img src="img/icon/linking.svg" alt="link"></button>
-                            </a>
-                        </div>
+                        <a href="https://esahubble.org/wordbank/quasar/" target="_blank">
+                            <button>Learn More<img src="img/icon/linking.svg" alt="link"></button>
+                        </a>
                     </div>
-                    <div class="carousel-image s2" style="background-image: url('img/slides/2.jpg')">
-                        <div class="content">
-                            <h2>Exploring MARS</h2>
-                            <span>
+                </div>
+
+                <div class="carousel-image s2" style="background-image: url('img/slides/2.jpg')">
+                    <div class="content">
+                        <h2>Exploring MARS</h2>
+                        <span>
                             As the fourth planet from the Sun, Mars has beckoned scientists and space enthusiasts alike, promising secrets about our neighboring planets and the possibility of life beyond Earth.
                             </span>
-                            <a href="pages/home.html">
-                                <button>Learn More<img src="img/icon/linking.svg" alt="link"></button>
-                            </a>
-                        </div>
+                        <a href="https://solarsystem.nasa.gov/planets/mars/overview/" target="_blank">
+                            <button>Learn More<img src="img/icon/linking.svg" alt="link"></button>
+                        </a>
                     </div>
-                    <div class="carousel-image s3" style="background-image: url('img/slides/3.jpg')">
-                        <div class="center-cont">
-                            <h2>ISS</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-image s4" style="background-image: url('img/slides/4.jpg')">
-                        <div class="glass-cont">
-                            <h2>Cosmic Anomalies</h2>
-                            <p>Unearth the mysteries surrounding an alien world, where anomalies defy known science and challenge the boundaries of possibility</p>
-                            <a href="pages/home.html">
-                                <button>Learn More<img src="img/icon/linking.svg" alt="link"></button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-image sE" style="background-image: url('img/slides/5.jpg')"></div>
-                    <div class="carousel-image sB" id="firstClone"
-                         style="background-image: url('img/slides/1.jpg')"></div>
                 </div>
-                <!-- End -->
 
-                <!-- Prev/Next Nav Button -->
-                <button id="nextBtn" class="slider-nav-btn">
-                    <img src="img/icon/chevron_right.svg" alt="">
-                </button>
-                <button id="prevBtn" class="slider-nav-btn">
-                    <img src="img/icon/chevron_left.svg" alt="">
-                </button>
-
-                <div class="l-overlay"></div>
-                <div class="r-overlay"></div>
-                <!-- End -->
-
-                <!-- Radio Nav Buttons -->
-                <div class="slider-nav-dots">
-                    <input type="radio" name="dot" id="dotA" class="dot" onclick="setSlide(0)">
-                    <label for="dotA"></label>
-                    <input type="radio" name="dot" id="dotB" class="dot" onclick="setSlide(1)">
-                    <label for="dotB"></label>
-                    <input type="radio" name="dot" id="dotC" class="dot" onclick="setSlide(2)">
-                    <label for="dotC"></label>
-                    <input type="radio" name="dot" id="dotD" class="dot" onclick="setSlide(3)">
-                    <label for="dotD"></label>
-                    <input type="radio" name="dot" id="dotE" class="dot" onclick="setSlide(4)">
-                    <label for="dotE"></label>
+                <div class="carousel-image s3" style="background-image: url('img/slides/3.jpg')">
+                    <div class="center-cont">
+                        <h2>
+                            <a href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank"
+                               style="all: unset">ISS</a>
+                        </h2>
+                    </div>
                 </div>
-                <!-- End -->
+
+                <div class="carousel-image s4" style="background-image: url('img/slides/4.jpg')">
+                    <div class="glass-cont">
+                        <h2>Cosmic Anomalies</h2>
+                        <p>Unearth the mysteries surrounding an alien world, where anomalies defy known science and
+                            challenge the boundaries of possibility</p>
+                        <a href="https://www.nasa.gov/feature/are-we-alone-in-the-universe-nasa-calls-for-new-framework/"
+                           target="_blank">
+                            <button>Learn More<img src="img/icon/linking.svg" alt="link"></button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="carousel-image sE" style="background-image: url('img/slides/5.jpg')">
+                    <a href="https://webb.nasa.gov/content/webbLaunch/whereIsWebb.html" target="_blank"
+                       class="bottom-cont">
+                        <button class="glass-panel">James Webb Space Telescope<img src="img/icon/linking.svg"
+                                                                                   alt="link"></button>
+                    </a>
+                </div>
+
+                <div class="carousel-image sB" id="firstClone" style="background-image: url('img/slides/1.jpg')"></div>
             </div>
-        </div>
+            <!-- End -->
 
+            <!-- Prev/Next Nav Button -->
+            <button id="nextBtn" class="slider-nav-btn">
+                <img src="img/icon/chevron_right.svg" alt="">
+            </button>
+            <button id="prevBtn" class="slider-nav-btn">
+                <img src="img/icon/chevron_left.svg" alt="">
+            </button>
+
+            <div class="l-overlay"></div>
+            <div class="r-overlay"></div>
+            <!-- End -->
+
+            <!-- Radio Nav Buttons -->
+            <div class="slider-nav-dots">
+                <input type="radio" name="dot" id="dotA" class="dot" onclick="setSlide(0)">
+                <label for="dotA"></label>
+                <input type="radio" name="dot" id="dotB" class="dot" onclick="setSlide(1)">
+                <label for="dotB"></label>
+                <input type="radio" name="dot" id="dotC" class="dot" onclick="setSlide(2)">
+                <label for="dotC"></label>
+                <input type="radio" name="dot" id="dotD" class="dot" onclick="setSlide(3)">
+                <label for="dotD"></label>
+                <input type="radio" name="dot" id="dotE" class="dot" onclick="setSlide(4)">
+                <label for="dotE"></label>
+            </div>
+            <!-- End -->
+        </div>
     </div>
 
 </main>

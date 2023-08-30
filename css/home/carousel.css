@@ -1,4 +1,5 @@
 .carousel-container {
+    grid-area: c;
     width: 800px;
     margin: auto;
     height: 475px;

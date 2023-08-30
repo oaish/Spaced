@@ -20,6 +20,14 @@
 </nav>
 </header>
 -->
-
+<script>
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true'
+    if (!isLoggedIn) {
+        alert("Nah Man no entry for you")
+    }
+    else {
+        alert("Welcome")
+    }
+</script>
 </body>
 </html>

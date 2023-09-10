@@ -226,6 +226,7 @@ header {
     outline: 2px solid transparent;
     outline-offset: 10px;
     transition: all 100ms;
+    cursor: var(--cursor), auto;
 }
 
 .search-box {
@@ -234,6 +235,7 @@ header {
     color: white;
     font-size: 1.5rem;
     margin-left: 10px;
+    cursor: var(--text), auto;
 }
 
 .search-bar:focus-within {

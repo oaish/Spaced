@@ -16,8 +16,13 @@ button {
     cursor: var(--pointer), auto;
 }
 
+input[type="text"] {
+    cursor: var(--text), auto;
+}
+
 :root {
     --cursor: url("../../img/cursor/cursor.png");
+    --text: url("../../img/cursor/text.png");
     --pointer: url("../../img/cursor/pointer.png");
     --dark-bg: #1b2025;
     --light-bg: #f3f6f9;

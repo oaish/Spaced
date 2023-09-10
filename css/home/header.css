@@ -1,51 +1,248 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
 
 header {
-    position: sticky;
+    z-index: 1000;
+    /*position: fixed;*/
+    position: absolute;
+    width: calc(100vw - 60px);
+    top: 30px;
+    left: 30px;
     display: flex;
     justify-content: space-between;
+}
+
+.menu {
+    position: relative;
+    transition: all 1s ease;
+    z-index: 10;
+}
+
+.nav-btn {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 100ms ease;
+    cursor: var(--pointer), auto;
+}
+
+.nav-btn > img {
+    width: 40px;
+    transition: all 1s ease;
+}
+
+#gallery img {
+    width: 50px;
+}
+
+#about img {
+    width: 50px;
+}
+
+.menu-btn > img {
+    filter: sepia(10%);
+    width: 55px;
+}
+
+.item-btn:focus {
+    filter: invert(35%) sepia(72%) saturate(743%) hue-rotate(136deg) brightness(93%) contrast(103%);
+}
+
+.filter {
+    filter: invert(27%) sepia(88%) saturate(7253%) hue-rotate(340deg) brightness(88%) contrast(96%);
+}
+
+.nav-tag {
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
     align-items: center;
     color: white;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: all 200ms ease;
-    background: #FFF;
+    opacity: 0;
+    width: 100px;
+    padding-inline: 10px;
+    height: 70px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #FFFFFFA0;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    transition: all .5s ease;
+    z-index: 9;
 }
 
-header {
-    background-image: url("../../img/SpaceX.png");
+.nav-item > .nav-tag {
+    translate: -30% 0;
+    right: -170%;
 }
 
-header > a {
-    text-decoration: none;
-    color: white;
+.nav-btn:active {
+    scale: 0.9;
 }
 
-#spaced {
-    margin-left: 100px;
-    width: 200px;
+.nav-btn:hover + .nav-tag {
+    opacity: 1;
+    translate: 0 0;
 }
 
-nav {
+.nav-item.logo {
+    width: 700px;
+}
+
+.nav-item {
+    width: 70px;
+    height: 70px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #FFFFFFA0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
     display: flex;
-    margin-right: 100px;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-nav > button {
-    all: unset;
-    list-style: none;
+.nav-item > img {
+    height: 80%;
 }
 
-nav > button > a {
-    font-size: 1.5rem;
-    text-decoration: none;
+.item-group {
+    position: absolute;
+    top: 120%;
+    pointer-events: none;
+}
+
+.drop-down > #home {
+    translate: 0 0;
+    opacity: 1;
+}
+
+.drop-down > #mission {
+    transition-delay: 100ms;
+    translate: 0 0;
+    opacity: 1;
+}
+
+.drop-down > #gallery {
+    transition-delay: 200ms;
+    translate: 0 0;
+    opacity: 1;
+}
+
+.drop-down > #about {
+    transition-delay: 300ms;
+    translate: 0 0;
+    opacity: 1;
+}
+
+.item-group > .nav-item {
+    transition: all 300ms ease;
+    translate: -40% 0;
+    scale: 0.9;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+
+/* Settings Menu */
+.setting-btn > img {
+    width: 45px !important;
+}
+
+.setting-btn + .nav-tag {
+    opacity: 0;
+    right: 86px;
+    translate: 30% 0;
+}
+
+.setting-btn:hover + .nav-tag {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.settings:active .setting-btn {
+    transition: .3s;
+    rotate: 180deg;
+}
+
+.options {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    opacity: 0;
     color: white;
-    transition: all 200ms ease;
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+    translate: 50% 0;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #FFFFFFA0;
+    transition: all 500ms ease-in-out;
+    font-family: 'Overlock SC', sans-serif;
+    box-shadow: inset 0 0 .5rem rgba(0, 0, 0, 0.25), 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
-nav > button:hover {
-    border-bottom: 2px solid #1892a6;
+.options-active {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.logout {
+    all: unset;
+    cursor: var(--pointer), auto;
+    border-radius: .5rem;
+    color: black;
+    width: 260px;
+    text-align: center;
+    background: white;
+    user-select: none;
+    padding-block: 10px;
+    opacity: 0.8;
+    transition: all .5s;
+}
+
+.logout:active {
+    scale: 0.95;
+    opacity: 1;
+    background: teal;
+}
+
+.search-bar {
+    background: rgba(255,255,255,0.1);
+    /*backdrop-filter: blur(100px);*/
+    display: flex;
+    width: 260px;
+    padding: 10px;
+    border-radius: .5rem;
+    margin-bottom: 10px;
+    border: 1px solid black ;
+    outline: 2px solid transparent;
+    outline-offset: 10px;
+    transition: all 100ms;
+}
+
+.search-box {
+    all: initial;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.search-bar:focus-within {
+    outline: 2px solid white;
+    outline-offset: 0;
+}
+
+.clear {
+    opacity: 0;
+    z-index: 100;
+    transition: all 100ms;
 }

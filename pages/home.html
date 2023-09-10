@@ -1,33 +1,77 @@
+<!Doctype html>
 <html lang="en">
 <head>
     <title>SPACED | Home</title>
-    <link rel="stylesheet" href="../css/home/root.css">
+    <link rel="stylesheet" href="../css/home/main.css">
+    <link rel="stylesheet" href="../css/index/root.css">
     <link rel="stylesheet" href="../css/home/header.css">
-    <link rel="stylesheet" href="../css/home/carousel.css">
-    <script src="../js/home/carousel.js" defer></script>
+    <script src="../js/home/main.js" defer></script>
+    <script src="../js/home/search.js" defer></script>
+    <script src="../js/home/header.js" defer></script>
+    <script src="../js/home/authorization.js"></script>
 </head>
 <body>
-<!--
+
+
 <header>
-<a href="../index.html">
-    <img src="../../img/Spaced.png" id="spaced" alt="logo">
-</a>
-<nav>
-    <button><a href="../pages/home.html">Home</a></button>
-    <button><a href="../pages/mission.html">Missions</a></button>
-    <button><a href="../pages/galleries.html">Galleries</a></button>
-    <button><a href="../pages/about.html">About</a></button>
-</nav>
+    <div class="nav-item menu">
+        <button class="menu-btn nav-btn"><img src="../img/icon/halo.png" alt=""></button>
+        <span class="menu-tag nav-tag">Menu</span>
+    </div>
+
+    <div class="item-group">
+        <div id="home" class="nav-item">
+            <button class="item-btn nav-btn"><img src="../img/icon/google_earth.svg" alt=""></button>
+            <span class="item-tag nav-tag">HOME</span>
+        </div>
+        <div id="mission" class="nav-item">
+            <button class="item-btn nav-btn"><img src="../img/icon/space_shuttle.svg" alt=""></button>
+            <span class="item-tag nav-tag">MISSION</span>
+        </div>
+        <div id="gallery" class="nav-item">
+            <button class="item-btn nav-btn"><img src="../img/icon/aperture.png" alt=""></button>
+            <span class="item-tag nav-tag">GALLERY</span>
+        </div>
+        <div id="about" class="nav-item">
+            <button class="item-btn nav-btn"><img src="../img/icon/about.png" alt=""></button>
+            <span class="item-tag nav-tag">ABOUT</span>
+        </div>
+    </div>
+
+    <div class="nav-item logo">
+        <img src="../img/Spaced.png" alt="">
+    </div>
+
+    <div class="nav-item settings">
+        <button class="nav-btn setting-btn"><img src="../img/icon/settings.svg" alt=""></button>
+        <span class="nav-tag setting-tag">Settings</span>
+    </div>
+
+    <div class="options">
+        <label class="search-bar">
+            <img src="../img/icon/search.svg" alt="">
+            <input class="opt search-box" size="13" type="text"/>
+            <img class="clear" src="../img/icon/clear.svg" alt="">
+        </label>
+        <button class="logout opt">Sign Out</button>
+    </div>
 </header>
--->
-<script>
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true'
-    if (!isLoggedIn) {
-        alert("Nah Man no entry for you")
-    }
-    else {
-        alert("Welcome")
-    }
-</script>
+
+
+<video src="../vid/Space.mp4" autoplay loop class="bg-video"></video>
+
+<div class="welcome">
+    <!--    <h1>-->
+    <!--        WELCOME TO <br/>-->
+    <!--        <span>SPACED</span>-->
+    <!--    </h1>-->
+    <div class="cosmo">
+        <img class="astronaut" src="Astronaut_Full.png" alt="">
+        <!--        <img class="asteroid A" src="../img/cosmo/asteroids/A.png" alt="">-->
+        <!--        <img class="asteroid B" src="../img/cosmo/asteroids/B.png" alt="">-->
+    </div>
+</div>
+
+<div class="welcome"></div>
 </body>
 </html>

@@ -1,107 +1,51 @@
-main {
-    z-index: 10;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background: #111;
+.welcome {
+    width: 100vw;
+    height: 99svh;
 }
 
-.main-header {
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-}
-
-.main-header > a {
-    margin-right: 10px;
-}
-
-.blob {
-    position: absolute;
-    background: linear-gradient(90deg, teal, rebeccapurple);
-    width: 300px;
-    aspect-ratio: 1;
-    translate: -50% -50%;
-    border-radius: 50%;
-    opacity: 0;
-    animation: blob-rotate 10s ease infinite;
-    transition: opacity 500ms ease;
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(100px);
-}
-
-main:hover .blob {
-    opacity: 1;
-}
-
-@keyframes blob-rotate {
-    25% {
-        scale: 1 1.1;
-    }
-    50% {
-        scale: 1 1;
-    }
-    75% {
-        scale: 1.1 1;
-    }
-    100% {
-        transform: rotateZ(360deg);
-    }
-}
-
-.glass-panel {
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 0.7rem;
-    box-shadow: 0 0 .5rem;
-}
-
-.container {
-    width: 90%;
-    height: 475px;
-    margin: 90px auto;
-    position: relative;
-    display: grid;
-    grid-template-areas: 'b c c' 'b c c';
-    gap: 75px;
-}
-
-.carousel-container {
-    flex: 4;
-    height: 475px;
-    overflow-x: auto;
-    display: flex;
-    flex-direction: row;
-}
-
-.carousel-slide {
-    flex: 1 0 683px;
-    height: 470px;
-    transition: all 500ms ease;
-}
-
-.carousel-container img {
+.bg-video {
+    position: fixed;
+    opacity: 0.7;
+    z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /*filter: blur(5px);*/
 }
 
-@media (max-width: 800px) {
-    .container {
-        grid-template-areas: 'b' 'c';
+.astronaut {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 600px;
+    animation: MoveUpDown 5s linear infinite;
+}
+
+.asteroid {
+    animation: MoveUpDown 5s linear infinite;
+    position: absolute;
+    width: 150px;
+    aspect-ratio: auto;
+    transition: all 1s ease;
+}
+
+.A {
+    top: 20%;
+    left: 60%;
+}
+
+.B {
+    width: 150px;
+    top: 50%;
+    left: 50%;
+}
+
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
     }
 }

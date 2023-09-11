@@ -11,6 +11,9 @@ const signinBack = document.getElementById("signinBack")
 const registerBtn = document.getElementById("register")
 const loginBtn = document.getElementById("login")
 
+const modal = document.getElementById("modal")
+const modalBtn = document.querySelector(".modal-ok")
+
 upBtn.onclick = function () {
     logo.classList.add("hidden-opacity")
     upBtn.classList.add("hidden-opacity")
@@ -77,6 +80,9 @@ registerBtn.onclick = function (e) {
     localStorage.setItem('pass', pass)
     localStorage.setItem('phone', phone)
     localStorage.setItem('isLoggedIn', 'false')
+    
+    document.forms[0].reset()
+    modal.showModal()
 }
 
 loginBtn.onclick = function (e) {
@@ -91,4 +97,9 @@ loginBtn.onclick = function (e) {
         localStorage.setItem('isLoggedIn', 'true')
         window.location.href = 'pages/home.html'
     }
+}
+
+modalBtn.onclick = function () {
+    modal.close()
+    signupBack.click()
 }

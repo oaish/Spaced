@@ -1,0 +1,44 @@
+#modal {
+    /*background: rgba(255,255,255,0.09);*/
+    background: rgba(0,0,0,0.09);
+    width: 350px;
+    height: 150px;
+    color: white;
+    padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block: 20%;
+    margin-left: 140px;
+    border-radius: 0.7rem;
+    backdrop-filter: blur(50px);
+    box-shadow:  0 0 .5rem rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+#modal::backdrop {
+    background: rgba(0,0,0,0.5);
+}
+
+#modal > h2 {
+    margin-bottom: 10px;
+}
+
+#modal > p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.modal-ok {
+    border: none;
+    border-radius: 0.2rem;
+    margin-right: 10px;
+    padding: 5px;
+    width: 20%;
+    align-self: flex-end;
+}
+
+.modal-ok:focus {
+    outline: 1px solid teal;
+    outline-offset: 2px;
+}

@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="css/index/header.css">
     <link rel="stylesheet" href="css/index/main.css">
     <link rel="stylesheet" href="css/index/auth.css">
+    <link rel="stylesheet" href="css/index/modal.css">
     <link rel="stylesheet" href="css/index/carousel.css">
     <link rel="stylesheet" href="css/index/carousel-content.css">
     <script src="js/index/parallax.js" defer></script>
     <script src="js/index/carousel.js" defer></script>
     <script src="js/index/blob.js" defer></script>
     <script src="js/index/auth.js" defer></script>
+    <script src="js/index/authorization.js"></script>
 </head>
 <body>
 
@@ -167,10 +169,20 @@
                 <label for="dotE"></label>
             </div>
             <!-- End -->
+
         </div>
     </div>
 
+    <!-- Modal Dialog -->
+    <dialog id="modal">
+        <h2>USER REGISTERED</h2>
+        <p>You can log into your account now</p>
+        <div class="modal-div"></div>
+        <button type="submit" class="modal-ok">OK</button>
+    </dialog>
+    <!-- End -->
 </main>
+
 
 </body>
 </html>

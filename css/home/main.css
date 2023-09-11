@@ -1,6 +1,7 @@
-.welcome {
+.division {
+    position: relative;
     width: 100vw;
-    height: 99svh;
+    height: 100svh;
 }
 
 .bg-video {
@@ -10,7 +11,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /*filter: blur(5px);*/
 }
 
 .astronaut {
@@ -21,26 +21,6 @@
     animation: MoveUpDown 5s linear infinite;
 }
 
-.asteroid {
-    animation: MoveUpDown 5s linear infinite;
-    position: absolute;
-    width: 150px;
-    aspect-ratio: auto;
-    transition: all 1s ease;
-}
-
-.A {
-    top: 20%;
-    left: 60%;
-}
-
-.B {
-    width: 150px;
-    top: 50%;
-    left: 50%;
-}
-
-
 @keyframes MoveUpDown {
     0%, 100% {
         transform: translateY(0);
@@ -48,4 +28,27 @@
     50% {
         transform: translateY(-20px);
     }
+}
+
+.glass-terminal {
+    position: absolute;
+    width: 600px;
+    height: 320px;
+    left: 100px;
+    padding: 30px;
+    bottom: 100px;
+    box-shadow: 5px 5px 0.5rem;
+    border-radius: 0.7rem;
+    border: 2px solid white;
+    backdrop-filter: blur(50px);
+}
+
+.glass-terminal p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+@keyframes typewriter {
+    0% { opacity: 1; width: 0 } 100% { opacity: 1 }
 }

@@ -14,3 +14,4 @@ searchBox.oninput = function () {
 clearBtn.onclick = function () {
     searchBox.clear()
 }
+

@@ -40,7 +40,7 @@
     box-shadow: 5px 5px 0.5rem;
     border-radius: 0.7rem;
     border: 2px solid white;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(25px);
 }
 
 .glass-terminal p {

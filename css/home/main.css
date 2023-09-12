@@ -6,7 +6,6 @@
 
 .bg-video {
     position: fixed;
-    opacity: 0.7;
     z-index: -1;
     width: 100%;
     height: 100%;
@@ -17,30 +16,31 @@
     position: absolute;
     top: 10%;
     right: 5%;
-    width: 600px;
+    width: 700px;
+    z-index: 10;
     animation: MoveUpDown 5s linear infinite;
 }
 
 @keyframes MoveUpDown {
     0%, 100% {
-        transform: translateY(0);
+        translate: 0 0;
     }
     50% {
-        transform: translateY(-20px);
+        translate: 0 -20px;
     }
 }
 
 .glass-terminal {
     position: absolute;
     width: 600px;
-    height: 320px;
+    height: 220px;
     left: 100px;
     padding: 30px;
-    bottom: 100px;
+    bottom: 120px;
     box-shadow: 5px 5px 0.5rem;
     border-radius: 0.7rem;
     border: 2px solid white;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(10px);
 }
 
 .glass-terminal p {
@@ -49,6 +49,102 @@
     font-family: monospace;
 }
 
-@keyframes typewriter {
-    0% { opacity: 1; width: 0 } 100% { opacity: 1 }
+.search-bar {
+    background: transparent;
+    opacity: 0;
+    backdrop-filter: blur(25px);
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: .4rem;
+    outline: 2px solid transparent;
+    outline-offset: 5px;
+    translate: 0 -40px;
+    transition: all 500ms;
+    cursor: var(--cursor), auto;
+    border: 2px solid white;
 }
+
+.search-box {
+    all: initial;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    cursor: var(--text), auto;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.search-bar:focus-within .search-box::placeholder {
+    transition: .5s;
+    opacity: 0;
+}
+
+.clear {
+    opacity: 0;
+    z-index: 100;
+    transition: all 200ms;
+}
+
+.clear:hover {
+    transition: .3s;
+    rotate: 180deg;
+}
+
+.search-result {
+    overflow: scroll;
+    min-height: 50px;
+    max-height: 150px;
+    margin-top: -4px;
+    border-radius: 0 0 .5rem .5rem;
+    background: white;
+    display: none;
+}
+
+.search-item {
+    all: unset;
+    box-sizing: border-box;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    grid-template-columns: 25px 1fr;
+    width: 100%;
+    height: 50px;
+    padding-inline: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.search-item > img {
+    width: 20px;
+    aspect-ratio: 1;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(96%) saturate(16%) hue-rotate(194deg) brightness(94%) contrast(100%);
+}
+
+.search-item > img[src="../img/icon/about.png"] {
+    object-fit: cover;
+}
+
+.search-item > p {
+    color: black;
+}
+
+.search-item > p > span {
+    color: white;
+    background: black;
+    padding-inline: 2px;
+    font-size: 1.2rem;
+    border-radius: .2rem;
+}
+
+.search-item > * {
+    transition: all 0.2s;
+    opacity: 0.7;
+}
+
+.search-item:hover > * {
+    opacity: 1;
+}
+
+.search-item:hover {
+    background: #DDD;
+}
+

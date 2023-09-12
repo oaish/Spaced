@@ -165,7 +165,7 @@ header {
     translate: 0 0;
 }
 
-.settings:active .setting-btn {
+.settings:hover .setting-btn {
     transition: .3s;
     rotate: 180deg;
 }
@@ -182,10 +182,10 @@ header {
     translate: 50% 0;
     font-size: 1.5rem;
     border-radius: 10px;
+    text-transform: uppercase;
     backdrop-filter: blur(10px);
     border: 2px solid #FFFFFFA0;
     transition: all 500ms ease-in-out;
-    font-family: 'Overlock SC', sans-serif;
     box-shadow: inset 0 0 .5rem rgba(0, 0, 0, 0.25), 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
@@ -205,45 +205,15 @@ header {
     user-select: none;
     padding-block: 10px;
     opacity: 0.8;
-    transition: all .5s;
+    transition: all .3s;
+}
+
+.logout:hover {
+    opacity: 1;
 }
 
 .logout:active {
     scale: 0.95;
     opacity: 1;
     background: teal;
-}
-
-.search-bar {
-    background: rgba(255,255,255,0.1);
-    display: flex;
-    width: 260px;
-    padding: 10px;
-    border-radius: .5rem;
-    margin-bottom: 10px;
-    border: 1px solid black ;
-    outline: 2px solid transparent;
-    outline-offset: 5px;
-    transition: all 100ms;
-    cursor: var(--cursor), auto;
-}
-
-.search-box {
-    all: initial;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    cursor: var(--text), auto;
-}
-
-.search-bar:focus-within {
-    outline: 2px solid white;
-    outline-offset: 0;
-}
-
-.clear {
-    opacity: 0;
-    z-index: 100;
-    transition: all 100ms;
 }

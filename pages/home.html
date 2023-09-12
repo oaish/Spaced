@@ -4,7 +4,9 @@
     <title>SPACED | Home</title>
     <link rel="stylesheet" href="../css/home/main.css">
     <link rel="stylesheet" href="../css/index/root.css">
+    <link rel="stylesheet" href="../css/home/media.css">
     <link rel="stylesheet" href="../css/home/header.css">
+    <link rel="stylesheet" href="../css/home/division.two.css">
     <script src="../js/home/main.js" defer></script>
     <script src="../js/home/search.js" defer></script>
     <script src="../js/home/header.js" defer></script>
@@ -49,11 +51,7 @@
     </div>
 
     <div class="options">
-        <!--        <label class="search-bar">-->
-        <!--            <img src="../img/icon/search.svg" alt="">-->
-        <!--            <input class="opt search-box" size="13" type="text"/>-->
-        <!--            <img class="clear" src="../img/icon/clear.svg" alt="">-->
-        <!--        </label>-->
+
         <button class="logout opt">Sign Out</button>
     </div>
 </header>
@@ -61,29 +59,42 @@
 
 <video src="../vid/Space.mp4" autoplay loop class="bg-video"></video>
 
-<div class="division">
+<div class="division main">
 
     <div class="glass-terminal">
-
         <p id="code-text">
-            Welcome to # where the mysteries of the universe meet the wonders of human exploration. Embark on a
-            celestial journey with us as we unlock the secrets of the cosmos and push the boundaries of human
-            knowledge. Our mission is to inspire, educate, and foster a deep appreciation for the vast expanse
-            beyond our planet.
+            Welcome to # where the mysteries of the universe meet the wonders of human exploration.
         </p>
 
+        <label class="search-bar">
+            <img src="../img/icon/search.svg" alt="">
+            <input class="opt search-box" type="text" size="36" placeholder="Explore the cosmos..."/>
+            <img class="clear" src="../img/icon/clear.svg" alt="">
+        </label>
+        <div class="search-result">
+            <a class="search-item" href="">
+                <img src="../img/icon/google_earth.svg" width="24" height="24" alt="">
+                <p>About - <span>Mission</span></p>
+            </a>
+        </div>
     </div>
 
     <div class="cosmo">
         <img class="astronaut" src="Astronaut_Full.png" alt="">
-        <!--        <img class="asteroid A" src="../img/cosmo/asteroids/A.png" alt="">-->
-        <!--        <img class="asteroid B" src="../img/cosmo/asteroids/B.png" alt="">-->
     </div>
 </div>
 
-<div class="division">
+<div class="division two">
+    <div class="blur-overlay"></div>
     <div class="white-div">
-
+        <h2>Destinations</h2>
+        <div class="celestials">
+            <div class="moon">
+            </div>
+            <div class="mars"></div>
+            <div class="jupiter"></div>
+            <div class="saturn"></div>
+        </div>
     </div>
 </div>
 

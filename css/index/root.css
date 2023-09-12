@@ -20,6 +20,10 @@ input[type="text"] {
     cursor: var(--text), auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --cursor: url("../../img/cursor/cursor.png");
     --text: url("../../img/cursor/text.png");

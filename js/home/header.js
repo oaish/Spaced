@@ -52,4 +52,7 @@ document.onclick = function (event) {
         options.classList.remove('options-active')
         opts.forEach(opt => opt.style.pointerEvents = 'none')
     }
+    if (!searchResult.contains(event.target)) {
+        searchResultShow('none')
+    }
 };

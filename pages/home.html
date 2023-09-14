@@ -57,7 +57,7 @@
 </header>
 
 
-<video src="../vid/Space.mp4" autoplay loop class="bg-video"></video>
+<video src="../vid/Space.mp4" class="bg-video" autoplay loop muted></video>
 
 <div class="division main">
 
@@ -72,9 +72,9 @@
             <img class="clear" src="../img/icon/clear.svg" alt="">
         </label>
         <div class="search-result">
-            <a class="search-item" href="">
+            <a class="search-item" href="#voyage">
                 <img src="../img/icon/google_earth.svg" width="24" height="24" alt="">
-                <p>About - <span>Mission</span></p>
+                <p>Plan your voyage - <span>Home</span></p>
             </a>
         </div>
     </div>
@@ -85,15 +85,22 @@
 </div>
 
 <div class="division two">
-    <div class="blur-overlay"></div>
-    <div class="white-div">
-        <h2>Destinations</h2>
-        <div class="celestials">
-            <div class="moon">
+    <div class="blur-div" id="voyage">
+        <div class="voyage-title">
+            <h2>
+                Plan your voyage
+            </h2>
+            <span class="white-bar bar-a"></span>
+            <span class="white-bar bar-b"></span>
+        </div>
+
+        <div class="main-box">
+            <div class="main-box-tab main-box-active">
+                <button class="tab-btn"></button>
             </div>
-            <div class="mars"></div>
-            <div class="jupiter"></div>
-            <div class="saturn"></div>
+            <div class="main-box-tab main-box-content"></div>
+            <div class="main-box-tab"></div>
+            <div class="main-box-tab"></div>
         </div>
     </div>
 </div>

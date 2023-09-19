@@ -31,4 +31,6 @@ function clearBtnHide() {
 
 function searchResultShow(type) {
     searchResult.style.display = type
+    if (type === "none") searchBar.style.borderRadius = ".4rem"
+    else searchBar.style.borderRadius = ".4rem .4rem 0 0"
 }

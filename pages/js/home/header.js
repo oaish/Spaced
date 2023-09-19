@@ -39,7 +39,7 @@ about.onclick = () => { window.location.href = `about.html` }
 
 logout.onclick = function () {
     localStorage.setItem('isLoggedIn', 'false')
-    window.location.href = '../index.html'
+    window.location.href = '../../../index.html'
 }
 
 document.onclick = function (event) {

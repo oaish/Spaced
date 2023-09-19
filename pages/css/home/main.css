@@ -16,9 +16,10 @@
     position: absolute;
     top: 10%;
     right: 5%;
-    width: 700px;
     z-index: 10;
-    animation: MoveUpDown 5s linear infinite;
+    width: 700px;
+    pointer-events: none;
+    /*animation: MoveUpDown 5s linear infinite;*/
 }
 
 @keyframes MoveUpDown {
@@ -30,6 +31,7 @@
     }
 }
 
+
 .glass-terminal {
     position: absolute;
     width: 600px;
@@ -37,6 +39,7 @@
     left: 100px;
     padding: 30px;
     bottom: 120px;
+    transition: all 1s ease;
     box-shadow: 5px 5px 0.5rem;
     border-radius: 0.7rem;
     border: 2px solid white;
@@ -68,6 +71,7 @@
 .search-box {
     all: initial;
     color: white;
+    width: calc(100% - 74px);
     font-size: 1.5rem;
     margin-left: 15px;
     cursor: var(--text), auto;
@@ -80,8 +84,12 @@
 }
 
 .clear {
+    position: absolute;
+    right: 0;
     opacity: 0;
     z-index: 100;
+    translate: 0 3px;
+    margin-inline: 10px;
     transition: all 200ms;
 }
 
@@ -94,7 +102,7 @@
     overflow: scroll;
     min-height: 50px;
     max-height: 150px;
-    margin-top: -4px;
+    /*margin-top: -4px;*/
     border-radius: 0 0 .5rem .5rem;
     background: white;
     display: none;

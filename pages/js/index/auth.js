@@ -95,7 +95,7 @@ loginBtn.onclick = function (e) {
     
     if (email === emailV && pass === passV) {
         localStorage.setItem('isLoggedIn', 'true')
-        window.location.href = 'pages/home.html'
+        window.location.href = '../../home.html'
     }
 }
 

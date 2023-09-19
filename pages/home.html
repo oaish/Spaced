@@ -2,51 +2,54 @@
 <html lang="en">
 <head>
     <title>SPACED | Home</title>
-    <link rel="stylesheet" href="../css/home/main.css">
-    <link rel="stylesheet" href="../css/index/root.css">
-    <link rel="stylesheet" href="../css/home/media.css">
-    <link rel="stylesheet" href="../css/home/header.css">
-    <link rel="stylesheet" href="../css/home/division.two.css">
-    <script src="../js/home/main.js" defer></script>
-    <script src="../js/home/search.js" defer></script>
-    <script src="../js/home/header.js" defer></script>
-    <script src="../js/home/authorization.js"></script>
-    <script src="../js/home/code.animation.js" defer></script>
+    <link rel="stylesheet" href="css/home/main.css">
+    <link rel="stylesheet" href="css/index/root.css">
+    <link rel="stylesheet" href="css/home/media.css">
+    <link rel="stylesheet" href="css/home/header.css">
+    <link rel="stylesheet" href="css/home/division.two.css">
+    <link rel="stylesheet" href="css/home/mainBox/structure.css">
+    <link rel="stylesheet" href="css/home/mainBox/dates.css">
+    <link rel="stylesheet" href="css/home/mainBox/planets.css">
+    <script src="js/home/main.js" defer></script>
+    <script src="js/home/misc.js" defer></script>
+    <script src="js/home/search.js" defer></script>
+    <script src="js/home/header.js" defer></script>
+    <script src="js/home/authorization.js"></script>
+    <script src="js/home/code.animation.js" defer></script>
 </head>
 <body>
 
-
 <header>
     <div class="nav-item menu">
-        <button class="menu-btn nav-btn"><img src="../img/icon/halo.png" alt=""></button>
+        <button class="menu-btn nav-btn"><img src="img/icon/halo.png" alt=""></button>
         <span class="menu-tag nav-tag">Menu</span>
     </div>
 
     <div class="item-group">
         <div id="home" class="nav-item">
-            <button class="item-btn nav-btn"><img src="../img/icon/google_earth.svg" alt=""></button>
+            <button class="item-btn nav-btn"><img src="img/icon/google_earth.svg" alt=""></button>
             <span class="item-tag nav-tag">HOME</span>
         </div>
         <div id="mission" class="nav-item">
-            <button class="item-btn nav-btn"><img src="../img/icon/space_shuttle.svg" alt=""></button>
+            <button class="item-btn nav-btn"><img src="img/icon/space_shuttle.svg" alt=""></button>
             <span class="item-tag nav-tag">MISSION</span>
         </div>
         <div id="gallery" class="nav-item">
-            <button class="item-btn nav-btn"><img src="../img/icon/aperture.png" alt=""></button>
+            <button class="item-btn nav-btn"><img src="img/icon/aperture.png" alt=""></button>
             <span class="item-tag nav-tag">GALLERY</span>
         </div>
         <div id="about" class="nav-item">
-            <button class="item-btn nav-btn"><img src="../img/icon/about.png" alt=""></button>
+            <button class="item-btn nav-btn"><img src="img/icon/about.png" alt=""></button>
             <span class="item-tag nav-tag">ABOUT</span>
         </div>
     </div>
 
     <div class="nav-item logo">
-        <img src="../img/Spaced.png" alt="">
+        <img src="img/Spaced.png" alt="">
     </div>
 
     <div class="nav-item settings">
-        <button class="nav-btn setting-btn"><img src="../img/icon/settings.svg" alt=""></button>
+        <button class="nav-btn setting-btn"><img src="img/icon/settings.svg" alt=""></button>
         <span class="nav-tag setting-tag">Settings</span>
     </div>
 
@@ -55,7 +58,6 @@
         <button class="logout opt">Sign Out</button>
     </div>
 </header>
-
 
 <video src="../vid/Space.mp4" class="bg-video" autoplay loop muted></video>
 
@@ -67,20 +69,19 @@
         </p>
 
         <label class="search-bar">
-            <img src="../img/icon/search.svg" alt="">
+            <img src="img/icon/search.svg" alt="">
             <input class="opt search-box" type="text" size="36" placeholder="Explore the cosmos..."/>
-            <img class="clear" src="../img/icon/clear.svg" alt="">
+            <img class="clear" src="img/icon/clear.svg" alt="">
         </label>
         <div class="search-result">
             <a class="search-item" href="#voyage">
-                <img src="../img/icon/google_earth.svg" width="24" height="24" alt="">
+                <img src="img/icon/google_earth.svg" width="24" height="24" alt="">
                 <p>Plan your voyage - <span>Home</span></p>
             </a>
         </div>
     </div>
-
     <div class="cosmo">
-        <img class="astronaut" src="Astronaut_Full.png" alt="">
+        <img class="astronaut" src="img/Astronaut_Full.png" alt="">
     </div>
 </div>
 
@@ -95,12 +96,70 @@
         </div>
 
         <div class="main-box">
-            <div class="main-box-tab main-box-active">
-                <button class="tab-btn"></button>
+            <div class="main-box-tab">
+                <button class="tab-btn main-box-active" id="planet-tab-btn">
+                    <img src="img/icon/earth.svg" alt="">
+                </button>
             </div>
-            <div class="main-box-tab main-box-content"></div>
-            <div class="main-box-tab"></div>
-            <div class="main-box-tab"></div>
+
+            <div class="main-box-title">
+                <h2>Choose your desired planet</h2>
+            </div>
+
+            <div class="main-box-tab">
+                <button class="tab-btn" id="calendar-tab-btn">
+                    <img src="img/icon/calendar.svg" alt="">
+                </button>
+            </div>
+
+            <div class="main-box-content" id="main-content">
+                <div class="planets-container ">
+                    <div class="planet-card" onclick="handlePlanetClick('Mars')">
+                        <div class="pl-image mars"></div>
+                        <div class="pl-text">Mars</div>
+                    </div>
+                    <div class="planet-card" onclick="handlePlanetClick('Jupiter')">
+                        <div class="pl-image jupiter"></div>
+                        <div class="pl-text">Jupiter</div>
+                    </div>
+                    <div class="planet-card" onclick="handlePlanetClick('Neptune')">
+                        <div class="pl-image neptune"></div>
+                        <div class="pl-text">Neptune</div>
+                    </div>
+                    <div class="planet-card" onclick="handlePlanetClick('Uranus')">
+                        <div class="pl-image uranus"></div>
+                        <div class="pl-text">Uranus</div>
+                    </div>
+                </div>
+
+                <div class="dates-container main-content-active">
+                    <div class="date-card"></div>
+                    <div class="date-card"></div>
+                    <div class="date-card"></div>
+                    <div class="date-card"></div>
+                </div>
+            </div>
+
+            <div class="main-box-tab">
+                <button class="tab-btn" id="launch-tab-btn">
+                    <img src="img/icon/Launch.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="checklist">
+            <div class="checklist-header">destination</div>
+            <div class="checklist-header">voyage date</div>
+            <div class="checklist-header">launch vehicle</div>
+            <div class="checklist-header">passenger</div>
+            <div class="checklist-text" id="dest">-</div>
+            <div class="checklist-text" id="date">-</div>
+            <div class="checklist-text" id="lv">-</div>
+            <div class="checklist-text passenger">
+                <div class="pass-btn minus pass-btn-hide" onclick="updatePassenger('minus')">-</div>
+                <div id="passenger">1</div>
+                <div class="pass-btn plus" onclick="updatePassenger('plus')">+</div>
+            </div>
         </div>
     </div>
 </div>

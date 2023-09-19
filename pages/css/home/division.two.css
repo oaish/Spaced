@@ -1,0 +1,125 @@
+.two {
+    display: flex;
+    align-items: center;
+}
+
+.blur-div {
+    padding-inline: 30px;
+    padding-block: 30px;
+    width: 80%;
+    height: 80%;
+    border: 2px solid white;
+    border-left: 50px solid #DDD;
+    border-radius: 0 20px 20px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 1rem;
+    transition: all 1s ease;
+}
+
+/* Voyage Title */
+
+.voyage-title {
+    position: relative;
+    width: fit-content;
+}
+
+.voyage-title > h2 {
+    width: fit-content;
+    border-bottom: 4px solid white;
+    color: white;
+    font-variant: small-caps;
+    font-size: 2.5rem;
+}
+
+.white-bar {
+    position: absolute;
+    background: white;
+    height: 4px;
+    width: 3.5rem;
+    transition: all .5s ease;
+}
+
+.bar-a {
+    left: 0;
+}
+
+.bar-b {
+    right: 0;
+}
+
+.voyage-title:hover .white-bar {
+    width: 5rem;
+}
+/* End */
+
+.checklist {
+    background: #00000050;
+    height: 25%;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 70px;
+    box-shadow: 0 0 1rem;
+    border-radius: .75rem;
+    width: calc(80% - 70px);
+    border: solid 5px white;
+    backdrop-filter: blur(20px);
+}
+
+.checklist * {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.checklist-header {
+    background: #FFF;
+    font-weight: 550;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: .75rem;
+}
+
+.checklist-text {
+    color: white;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.passenger {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pass-btn {
+    cursor: var(--pointer), auto;
+    border-radius: .75rem;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    transition: all 200ms ease;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 6px 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pass-btn:active {
+    scale: 0.9;
+}
+
+.pass-btn-hide {
+    opacity: 0;
+    pointer-events: none;
+}

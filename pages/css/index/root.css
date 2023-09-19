@@ -28,6 +28,9 @@ html {
     --cursor: url("../../img/cursor/cursor.png");
     --text: url("../../img/cursor/text.png");
     --pointer: url("../../img/cursor/pointer.png");
+    --nested-cursor: url("../../../img/cursor/cursor.png");
+    --nested-text: url("../../../img/cursor/text.png");
+    --nested-pointer: url("../../../img/cursor/pointer.png");
     --dark-bg: #1b2025;
     --light-bg: #f3f6f9;
 }

@@ -1,0 +1,12 @@
+.dates-container {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    transition: all .5s ease;
+    cursor: var(--nested-cursor), auto;
+}
+

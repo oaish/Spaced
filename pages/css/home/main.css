@@ -44,6 +44,7 @@
     border-radius: 0.7rem;
     border: 2px solid white;
     backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 .glass-terminal p {
@@ -64,17 +65,18 @@
     outline-offset: 5px;
     translate: 0 -40px;
     transition: all 500ms;
-    cursor: var(--cursor), auto;
+    cursor: var(--text), auto;
     border: 2px solid white;
+    z-index: 10;
 }
 
 .search-box {
     all: initial;
+    z-index: 100;
     color: white;
     width: calc(100% - 74px);
     font-size: 1.5rem;
     margin-left: 15px;
-    cursor: var(--text), auto;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -83,14 +85,27 @@
     opacity: 0;
 }
 
+.search-bar > img[alt="search-icon"] {
+    pointer-events: auto;
+    cursor: var(--cursor), auto;
+}
+
 .clear {
     position: absolute;
     right: 0;
     opacity: 0;
+    pointer-events: none;
+    cursor: var(--cursor), auto;
     z-index: 100;
     translate: 0 3px;
     margin-inline: 10px;
     transition: all 200ms;
+}
+
+.clear-btn-show {
+    opacity: 1;
+    pointer-events: all;
+    cursor: var(--pointer), auto;
 }
 
 .clear:hover {
@@ -102,7 +117,7 @@
     overflow: scroll;
     min-height: 50px;
     max-height: 150px;
-    /*margin-top: -4px;*/
+
     border-radius: 0 0 .5rem .5rem;
     background: white;
     display: none;

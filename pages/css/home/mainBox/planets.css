@@ -87,10 +87,11 @@
     left: 20px;
     top: -25px;
     padding: 5px 5px;
-    background: white;
+    color: white;
     font-size: 1.5rem;
-    border-radius: 10px;
     font-weight: 550;
+    border: 1px solid white;
+    border-radius: 10px;
     font-variant: small-caps;
     transition: all .5s ease;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
@@ -99,4 +100,20 @@
 .planet-card:hover .pl-text {
     opacity: 1;
     left: 95px;
+}
+
+.mars ~ .pl-text {
+    background-color: crimson;
+}
+
+.jupiter ~ .pl-text {
+    background-color: goldenrod;
+}
+
+.neptune ~ .pl-text {
+    background-color: rebeccapurple;
+}
+
+.uranus ~ .pl-text {
+    background-color: teal;
 }

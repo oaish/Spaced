@@ -3,6 +3,16 @@ function handlePlanetClick(planetName) {
     setCheckList()
 }
 
+function handleDateClick(date) {
+    localStorage.setItem("voyageDate", date)
+    setCheckList()
+}
+
+function handleLaunchClick(agencyName) {
+    localStorage.setItem("launchAgency", agencyName)
+    setCheckList()
+}
+
 function setCheckList() {
     const dest = document.querySelector("#dest")
     const date = document.querySelector("#date")
@@ -10,7 +20,7 @@ function setCheckList() {
     
     dest.textContent = localStorage.getItem("destination")
     date.textContent = localStorage.getItem("voyageDate")
-    launch.textContent = localStorage.getItem("launchVehicle")
+    launch.textContent = localStorage.getItem("launchAgency")
     handlePassBtn()
 }
 
@@ -35,27 +45,6 @@ function updatePassenger(type) {
     localStorage.setItem("passenger", value.toString())
 }
 
-async function handleMainContent(id) {
-    const planetsContainer = document.querySelector(".planets-container")
-    const datesContainer = document.querySelector(".dates-container")
-    
-    switch (id) {
-        case "planet-tab-btn":
-            mainTitle.innerHTML = "Choose your desired planet";
-            planetsContainer.classList.add('main-content-active')
-            break;
-        case "calendar-tab-btn":
-            mainTitle.innerHTML = "Pick a voyage date";
-            planetsContainer.classList.remove('main-content-active')
-            datesContainer.classList.add('main-content-active')
-            datesContainer.style.transitionDelay = '.5s'
-            break;
-        case "launch-tab-btn":
-            mainTitle.innerHTML = "Select a launching vehicle";
-            break;
-    }
-}
-
 function handlePassBtn() {
     const pass = document.querySelector("#passenger")
     const plus = document.querySelector(".plus")
@@ -70,5 +59,13 @@ function handlePassBtn() {
     if (value === 5) plus.classList.add('pass-btn-hide')
 }
 
-handlePassBtn()
+function handleFirstTime() {
+    handlePlanetClick('-')
+    handleDateClick('-')
+    handleLaunchClick('-')
+    localStorage.setItem("passenger", "1")
+    handlePassBtn()
+}
+
+handleFirstTime()
 

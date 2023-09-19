@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/home/media.css">
     <link rel="stylesheet" href="css/home/header.css">
     <link rel="stylesheet" href="css/home/division.two.css">
-    <link rel="stylesheet" href="css/home/mainBox/structure.css">
     <link rel="stylesheet" href="css/home/mainBox/dates.css">
+    <link rel="stylesheet" href="css/home/mainBox/launch.css">
     <link rel="stylesheet" href="css/home/mainBox/planets.css">
+    <link rel="stylesheet" href="css/home/mainBox/structure.css">
     <script src="js/home/main.js" defer></script>
     <script src="js/home/misc.js" defer></script>
     <script src="js/home/search.js" defer></script>
@@ -97,7 +98,7 @@
 
         <div class="main-box">
             <div class="main-box-tab">
-                <button class="tab-btn main-box-active" id="planet-tab-btn">
+                <button class="tab-btn main-box-active" id="planets">
                     <img src="img/icon/earth.svg" alt="">
                 </button>
             </div>
@@ -107,13 +108,13 @@
             </div>
 
             <div class="main-box-tab">
-                <button class="tab-btn" id="calendar-tab-btn">
+                <button class="tab-btn" id="dates">
                     <img src="img/icon/calendar.svg" alt="">
                 </button>
             </div>
 
             <div class="main-box-content" id="main-content">
-                <div class="planets-container ">
+                <div class="planets-container main-content-active">
                     <div class="planet-card" onclick="handlePlanetClick('Mars')">
                         <div class="pl-image mars"></div>
                         <div class="pl-text">Mars</div>
@@ -132,16 +133,35 @@
                     </div>
                 </div>
 
-                <div class="dates-container main-content-active">
-                    <div class="date-card"></div>
-                    <div class="date-card"></div>
-                    <div class="date-card"></div>
-                    <div class="date-card"></div>
+                <div class="dates-container">
+                    <div class="date-card" onclick="handleDateClick('19th March')">
+                        <div class="day-card ten">19</div>
+                        <div class="month-card" style="background: crimson">MARCH</div>
+                    </div>
+                    <div class="date-card" onclick="handleDateClick('20th May')">
+                        <div class="day-card ten">20</div>
+                        <div class="month-card" style="background: teal">MAY</div>
+                    </div>
+                    <div class="date-card" onclick="handleDateClick('12th July')">
+                        <div class="day-card ten">12</div>
+                        <div class="month-card" style="background: goldenrod">JULY</div>
+                    </div>
+                    <div class="date-card" onclick="handleDateClick('31th October')">
+                        <div class="day-card ten">31</div>
+                        <div class="month-card" style="background: rebeccapurple">OCTOBER</div>
+                    </div>
+                </div>
+
+                <div class="launch-container">
+                    <div class="launch-card" onclick="handleLaunchClick('SpaceX')" style="background: url('img/cosmo/launch/spaceX.jpg')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('NASA')" style="background: url('img/cosmo/launch/nasa.jpg')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('Blue Origin')" style="background-image: url('img/cosmo/launch/blue_origin.png')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('ISRO')" style="background-image: url('img/cosmo/launch/isro.png')"></div>
                 </div>
             </div>
 
             <div class="main-box-tab">
-                <button class="tab-btn" id="launch-tab-btn">
+                <button class="tab-btn" id="launch">
                     <img src="img/icon/Launch.svg" alt="">
                 </button>
             </div>
@@ -150,7 +170,7 @@
         <div class="checklist">
             <div class="checklist-header">destination</div>
             <div class="checklist-header">voyage date</div>
-            <div class="checklist-header">launch vehicle</div>
+            <div class="checklist-header">launch agency</div>
             <div class="checklist-header">passenger</div>
             <div class="checklist-text" id="dest">-</div>
             <div class="checklist-text" id="date">-</div>
@@ -160,7 +180,11 @@
                 <div id="passenger">1</div>
                 <div class="pass-btn plus" onclick="updatePassenger('plus')">+</div>
             </div>
+            <div class="submit">
+
+            </div>
         </div>
+
     </div>
 </div>
 

@@ -1,5 +1,6 @@
-.dates-container {
+.launch-container {
     opacity: 0;
+    translate: 0 50%;
     pointer-events: none;
     position: absolute;
     inset: 0;
@@ -10,40 +11,19 @@
     cursor: var(--nested-cursor), auto;
 }
 
-.date-card {
+.launch-card {
     cursor: var(--nested-pointer), auto;
     overflow: hidden;
-    display: grid;
     width: 150px;
     height: 150px;
-    background: white;
+    background-color: black;
+    background-size: contain;
     box-shadow: 0 0 .7rem;
     border-radius: .75rem;
     border: 1px solid white;
     transition: all 300ms ease;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 50px;
 }
 
-.month-card {
-    grid-column: span 2;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.day-card {
-    background: black;
-    color: white;
-    font-size: 5rem;
-    font-weight: 700;
-}
-
-.month-card, .day-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.date-card:active {
+.launch-card:active {
     scale: 0.9;
 }

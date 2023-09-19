@@ -4,8 +4,8 @@
 }
 
 .blur-div {
-    padding-inline: 30px;
-    padding-block: 30px;
+    position: relative;
+    padding: 30px;
     width: 80%;
     height: 80%;
     border: 2px solid white;
@@ -120,6 +120,25 @@
 }
 
 .pass-btn-hide {
-    opacity: 0;
+    background: #FFFFFF55;
     pointer-events: none;
+}
+
+.submit {
+    position: absolute;
+    cursor: var(--pointer), auto;
+    bottom: 10px;
+    right: -120px;
+    width: 90px;
+    height: 90px;
+    background-image: url("../../img/icon/submit_right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transition: all 400ms ease;
+}
+
+.submit:active {
+    opacity: 0.7;
+    scale: 0.95;
 }

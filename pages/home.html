@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="css/home/media.css">
     <link rel="stylesheet" href="css/home/header.css">
     <link rel="stylesheet" href="css/home/division.two.css">
+    <link rel="stylesheet" href="css/home/division.three.css">
     <link rel="stylesheet" href="css/home/mainBox/dates.css">
     <link rel="stylesheet" href="css/home/mainBox/launch.css">
     <link rel="stylesheet" href="css/home/mainBox/planets.css">
     <link rel="stylesheet" href="css/home/mainBox/structure.css">
-    <script src="js/home/data.js" async></script>
+    <link rel="stylesheet" href="css/home/pageBox/gallery-box.css">
+    <script src="js/home/header.js" defer></script>
+    <script src="js/home/search.js" defer></script>
     <script src="js/home/main.js" defer></script>
     <script src="js/home/misc.js" defer></script>
-    <script src="js/home/search.js" defer></script>
-    <script src="js/home/header.js" defer></script>
+    <script src="js/home/data.js" defer></script>
     <script src="js/home/authorization.js"></script>
-    <script src="js/home/text.animation.js" defer></script>
+    <script src="js/home/animation.js" defer></script>
 </head>
 <body>
 
-<header>
+<header id="header">
     <div class="nav-item menu">
         <button class="menu-btn nav-btn"><img src="img/icon/halo.png" alt=""></button>
         <span class="menu-tag nav-tag">Menu</span>
@@ -63,6 +65,9 @@
 <video src="vid/Space.mp4" class="bg-video" autoplay loop muted></video>
 
 <div class="division main">
+    <div class="cosmo">
+        <img class="astronaut" src="img/Astronaut_Full.png" alt="">
+    </div>
 
     <div class="glass-terminal">
         <p id="code-text">
@@ -74,20 +79,13 @@
             <input class="opt search-box" type="text" size="36" placeholder="Explore the cosmos..."/>
             <img class="clear" src="img/icon/clear.svg" alt="">
         </label>
-        <div class="search-result">
-<!--            <a class="search-item" href="#voyage">-->
-<!--                <img src="img/icon/google_earth.svg" width="24" height="24" alt="">-->
-<!--                <p>Plan your voyage - <span>Home</span></p>-->
-<!--            </a>-->
-        </div>
-    </div>
-    <div class="cosmo">
-        <img class="astronaut" src="img/Astronaut_Full.png" alt="">
+
+        <div class="search-result"></div>
     </div>
 </div>
 
-<div class="division two">
-    <div class="blur-div" id="voyage">
+<div class="division two" id="voyage">
+    <div class="blur-div">
         <div class="voyage-title">
             <h2>
                 Plan your voyage
@@ -153,10 +151,14 @@
                 </div>
 
                 <div class="launch-container">
-                    <div class="launch-card" onclick="handleLaunchClick('SpaceX')" style="background: url('img/cosmo/launch/spaceX.jpg')"></div>
-                    <div class="launch-card" onclick="handleLaunchClick('NASA')" style="background: url('img/cosmo/launch/nasa.jpg')"></div>
-                    <div class="launch-card" onclick="handleLaunchClick('Blue Origin')" style="background-image: url('img/cosmo/launch/blue_origin.png')"></div>
-                    <div class="launch-card" onclick="handleLaunchClick('ISRO')" style="background-image: url('img/cosmo/launch/isro.png')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('SpaceX')"
+                         style="background: url('img/cosmo/launch/spaceX.jpg')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('NASA')"
+                         style="background: url('img/cosmo/launch/nasa.jpg')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('Blue Origin')"
+                         style="background-image: url('img/cosmo/launch/blue_origin.png')"></div>
+                    <div class="launch-card" onclick="handleLaunchClick('ISRO')"
+                         style="background-image: url('img/cosmo/launch/isro.png')"></div>
                 </div>
             </div>
 
@@ -187,7 +189,32 @@
 
 <div class="division three">
 
+    <div class="pages-container">
+        <div class="page-block">
+            <div class="gallery-stack">
+                <div class="gallery-card ca"></div>
+                <div class="gallery-card cb"><div class="gallery-image-panel"></div></div>
+                <div class="gallery-card cc"></div>
+            </div>
+        </div>
+        <div class="page-block">
+            <div class="gallery-stack">
+                <div class="gallery-card ca"></div>
+                <div class="gallery-card cb"><div class="gallery-image-panel"></div></div>
+                <div class="gallery-card cc"></div>
+            </div>
+        </div>
+        <div class="page-block">
+            <div class="gallery-stack">
+                <div class="gallery-card ca"></div>
+                <div class="gallery-card cb"><div class="gallery-image-panel"></div></div>
+                <div class="gallery-card cc"></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div id="dim"></div>
 
 </body>
 </html>

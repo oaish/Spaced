@@ -52,24 +52,27 @@
     inset -25px 0 35px 0 black, -3px 0 10px -2px rgba(0, 0, 0, 0.5);
 }
 
+.pl-image {
+    animation: planet-rotate calc(16.6 * .1s) linear infinite;
+}
+
 .mars {
     background-image: url("../../../img/cosmo/mars.jpg");
-    animation: planet-rotate calc(24.6 * .1s) linear infinite;
 }
 
 .jupiter {
     background-image: url("../../../img/cosmo/jupiter.jpg");
-    animation: planet-rotate calc(9.9 * .1s) linear infinite;
+    /*animation: planet-rotate calc(9.9 * .1s) linear infinite;*/
 }
 
 .neptune {
     background-image: url("../../../img/cosmo/neptune.jpg");
-    animation: planet-rotate calc(16.1 * .1s) linear infinite;
+    /*animation: planet-rotate calc(16.1 * .1s) linear infinite;*/
 }
 
 .uranus {
     background-image: url("../../../img/cosmo/uranus.jpg");
-    animation: planet-rotate calc(15.2 * .1s) linear infinite;
+    /*animation: planet-rotate calc(15.2 * .1s) linear infinite;*/
 }
 
 @keyframes planet-rotate {

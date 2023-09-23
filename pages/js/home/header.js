@@ -8,20 +8,18 @@ const logout = document.querySelector('.logout')
 
 menuBtn.onclick = () => {
     if (menuItems.classList.contains('drop-down')) {
-        items.forEach(item => item.style.pointerEvents = 'none') 
-    } 
-    else {
+        items.forEach(item => item.style.pointerEvents = 'none')
+    } else {
         items.forEach(item => item.style.pointerEvents = 'all')
     }
     menuItems.classList.toggle('drop-down')
     menuBtn.classList.toggle('filter')
 }
 
-settingsBtn.onclick = () => {
+settingsBtn.onclick = (e) => {
     if (options.classList.contains('options-active')) {
         opts.forEach(opt => opt.style.pointerEvents = 'none')
-    } 
-    else {
+    } else {
         opts.forEach(opt => opt.style.pointerEvents = 'all')
     }
     options.classList.toggle('options-active')
@@ -32,14 +30,27 @@ const mission = document.querySelector("#mission")
 const gallery = document.querySelector("#gallery")
 const about = document.querySelector("#about")
 
-home.onclick = () => { window.location.href = `home.html` }
-mission.onclick = () => { window.location.href = `mission.html` }
-gallery.onclick = () => { window.location.href = `gallery.html` }
-about.onclick = () => { window.location.href = `about.html` }
+home.onclick = () => {
+    window.location.href = `home.html`
+}
+mission.onclick = () => {
+    window.location.href = `mission.html`
+}
+gallery.onclick = () => {
+    window.location.href = `gallery.html`
+}
+about.onclick = () => {
+    window.location.href = `about.html`
+}
 
 logout.onclick = function () {
     localStorage.setItem('isLoggedIn', 'false')
     window.location.href = '../index.html#index-main'
+}
+
+const resultClickHandler = {
+    isSettingsClicked: false,
+    isMenuClicked: false
 }
 
 document.onclick = function (event) {
@@ -49,6 +60,7 @@ document.onclick = function (event) {
         menuBtn.classList.remove('filter')
     }
     if (!settingsBtn.contains(event.target) && !options.contains(event.target)) {
+        if (resultClickHandler.isSettingsClicked) return
         options.classList.remove('options-active')
         opts.forEach(opt => opt.style.pointerEvents = 'none')
     }
@@ -56,3 +68,9 @@ document.onclick = function (event) {
         searchResultShow('none')
     }
 };
+
+document.onmouseup = function () {
+    for (const key in resultClickHandler) {
+        resultClickHandler[key] = false
+    }
+}

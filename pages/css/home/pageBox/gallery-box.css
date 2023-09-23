@@ -1,0 +1,52 @@
+
+.gallery-card {
+    position: absolute;
+    top: 10%;
+    /*left: 20%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    box-shadow: 2px 2px 1rem;
+    border-radius: 1.5rem;
+    transition: .3s ease;
+    border: 2px solid white;
+    backdrop-filter: blur(50px);
+}
+
+.gallery-image-panel {
+    width: 80%;
+    height: 80%;
+    border-radius: 1.5rem;
+    border: 2px solid white;
+}
+
+.ca {
+    z-index: 9;
+    translate: -45%;
+    rotate: -10deg;
+}
+
+.cb {
+    cursor: var(--nested-pointer), auto;
+    z-index: 10;
+    translate: -50%;
+    rotate: -15deg;
+}
+
+.cc {
+    translate: -40%;
+    rotate: -5deg;
+}
+
+.cb > .gallery-image-panel {
+    background-image: url('../../../img/cosmo/naut.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery-stack:hover > .gallery-card{
+    translate: -40%;
+    rotate: 0deg;
+}

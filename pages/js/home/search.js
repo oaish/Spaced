@@ -9,38 +9,49 @@ searchBox.oninput = function (e) {
     if (searchBox.value === "") clearBtnHide()
     else clearBtnShow()
 
-    const text = e.target.value;
+    const text = e.target.value.trim().toLowerCase();
     const matchedResults = []
+    
+    if (text.length < 1) {
+        searchResultShow('none')
+        return
+    }
 
     indices.forEach(index => {
-        const sr = index.keywords.find(keyword => keyword.test(text))
-        if (sr) {
+        const isMatched = index.text.toLowerCase().trim().includes(text)
+        if (isMatched) { 
             matchedResults.push(index)
         }
     })
 
     if (matchedResults.length > 0) {
         matchedResults.map(result => {
-            const anchor = document.createElement("a");
-            anchor.classList.add("search-item");
-            anchor.href = result.link;
-            anchor.addEventListener("click", (event) => {
-                if (!result.isLink) event.preventDefault(); 
-                result.exec(result); 
-            });
+            const searchItem = document.createElement("div");
 
-            anchor.innerHTML = `
+            searchItem.classList.add("search-item");
+            searchItem.addEventListener("click", () => {
+                if (result.isLink) {
+                    window.location.href = result.link
+                }
+                searchResultShow('none');
+                clearBtn.click()
+                result.exec(); 
+            });
+            
+            const pattern = new RegExp(text, 'i')
+            const textToReplace = `<strong class="strong-text">${text}</strong>`
+
+            searchItem.innerHTML = `
                 <img src="${result.icon}" width="24" height="24" alt="">
-                <p>${result.text} - <span>${result.origin}</span></p>
+                <p>${result.text.toLowerCase().replace(pattern, textToReplace)} - <span>${result.origin}</span></p>
             `;
 
-            searchResult.appendChild(anchor);
+            searchResult.appendChild(searchItem);
         })
         searchResultShow('block')
     } else {
         searchResultShow('none')
     }
-
 }
 
 clearBtn.onclick = function () {

@@ -7,7 +7,6 @@ body {
 
 header {
     z-index: 1000;
-    /*position: fixed;*/
     position: absolute;
     width: calc(100vw - 60px);
     top: 30px;
@@ -93,7 +92,7 @@ header {
 }
 
 .nav-item.logo {
-    width: 700px;
+    width: 46vw;
 }
 
 .nav-item {

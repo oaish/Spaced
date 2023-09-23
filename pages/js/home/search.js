@@ -16,18 +16,25 @@ searchBox.oninput = function (e) {
         const sr = index.keywords.find(keyword => keyword.test(text))
         if (sr) {
             matchedResults.push(index)
-            console.log(matchedResults)
         }
     })
 
     if (matchedResults.length > 0) {
         matchedResults.map(result => {
-            if (searchResult.innerHTML.includes(result.text)) return
-            const x = result.exec
-            searchResult.innerHTML += `<a class="search-item" href="${result.link}" onclick="${x}">
-                                <img src="${result.icon}" width="24" height="24" alt="">
-                                <p>${result.text} - <span>${result.origin}</span></p>
-                             </a>`
+            const anchor = document.createElement("a");
+            anchor.classList.add("search-item");
+            anchor.href = result.link;
+            anchor.addEventListener("click", (event) => {
+                if (!result.isLink) event.preventDefault(); 
+                result.exec(result); 
+            });
+
+            anchor.innerHTML = `
+                <img src="${result.icon}" width="24" height="24" alt="">
+                <p>${result.text} - <span>${result.origin}</span></p>
+            `;
+
+            searchResult.appendChild(anchor);
         })
         searchResultShow('block')
     } else {

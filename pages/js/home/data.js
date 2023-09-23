@@ -8,23 +8,38 @@ const icons = {
 const indices = [
     {
         text: 'Plan your voyage',
+        isLink: true,
         link: '#voyage',
         origin: "Home",
         icon: icons.homeIcon,
-        keywords: [/voyage/i, /plan/i, /your/i, /planet/i, /planets/i, /destination/i, /passenger/i, /dates/i],
+        keywords: [/plan/i, /your/i, /voyage/i],
         exec: function () {
 
         }
     },
     {
         text: 'Choose your desired planet',
+        isLink: true,
         link: '#voyage',
         origin: "Mission",
         icon: icons.missionIcon,
         keywords: [/mon/i, /plan[et]?/i, /your/i, /planet/i, /planets/i, /destination/i],
-        exec: function search() {
+        exec: function () {
             searchResultShow('none');
             console.log("yeah");
+        }
+    },
+    {
+        text: 'Sign Out',
+        isLink: false,
+        link: '#settings',
+        origin: "Settings",
+        icon: icons.missionIcon,
+        keywords: [/signout/i, /sign out/i, /logout/i, /log out/i],
+        exec: function () {
+            searchResultShow('none');
+            settingsBtn.click();
+            console.log("yeah nah");
         }
     }
 ];

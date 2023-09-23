@@ -28,7 +28,7 @@
     justify-content: center;
     border: 2px solid white;
     transition: all 500ms ease;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: -10px -10px 1rem rgba(0, 0, 0, 0.5);
 }
 
 .planet-card:active {

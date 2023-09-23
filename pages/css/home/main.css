@@ -44,7 +44,7 @@
     border-radius: 0.7rem;
     border: 2px solid white;
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 10;
 }
 
 .glass-terminal p {

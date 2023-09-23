@@ -71,13 +71,13 @@ main:hover .blob {
 }
 
 .container {
-    width: 90%;
-    height: 475px;
-    margin: 90px auto;
     position: relative;
+    margin: 90px auto;
+    height: 475px;
+    width: 90%;
+    gap: 75px;
     display: grid;
     grid-template-areas: 'b c c' 'b c c';
-    gap: 75px;
 }
 
 .carousel-container {

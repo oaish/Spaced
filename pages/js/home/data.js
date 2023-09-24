@@ -14,9 +14,7 @@ const indices = [
         link: '#voyage',
         origin: "Home",
         icon: icons.homeIcon,
-        exec: function () {
-
-        }
+        exec: function () {}
     },
     {
         text: 'Choose your desired planet',
@@ -63,30 +61,93 @@ const indices = [
         }
     },
     {
-        text: "Find the Cosmonaut",
+        text: "Where is Cosmonaut",
         isLink: false,
         origin: "Mystery",
         icon: icons.easterEggIcon,
         exec: function () {
+            if (!isCosmonautVisible) return
             document.querySelector("#dim").style.opacity = '1'
             document.querySelector(".astronaut").style.rotate = '-5deg'
             setTimeout(() => {
                 document.querySelector("#dim").style.opacity = '0'
                 document.querySelector(".astronaut").style.rotate = '0deg'
-            }, 5 * 1000)
+            }, 3 * 1000)
+        }
+    },
+    {
+        text: "Cosmonaut, begone!!!",
+        isLink: false,
+        origin: "Mystery",
+        icon: icons.easterEggIcon,
+        exec: function () {
+            begoneCosmonaut()
+        }
+    },
+    {
+        text: "Cosmonaut, return!!!",
+        isLink: false,
+        origin: "Mystery",
+        icon: icons.easterEggIcon,
+        exec: function () {
+            spawnCosmonaut()
         }
     }
 ];
 
-/* ObjectFormat */
-/*
-    {
-        text: '',
-        origin: "",
-        icon: "",
-        keywords: [],
-        exec: function () {
+let isCosmonautVisible = true
 
-        }
-    }
-*/
+function begoneCosmonaut() {
+    if (!isCosmonautVisible) return
+    isCosmonautVisible = true
+    
+    const dim = document.querySelector("#dim")
+    const portal = document.querySelector(".portal");
+    const astronaut = document.querySelector(".astronaut");
+    
+    dim.style.opacity = '1'
+    astronaut.style.rotate = '-5deg'
+    
+    setTimeout(() => {
+        dim.style.opacity = '0'
+        portal.style.display = "none"
+    }, 4.2 * 1000)
+
+    portal.style.display = "block"
+    portal.play()
+    portal.playbackRate = '1.05'
+
+    setTimeout(() => {
+        astronaut.style.scale = '0'
+        astronaut.style.translate = '-20% -20%'
+        astronaut.style.rotate = '-72deg'
+        isCosmonautVisible = false
+    }, 2 * 1000);
+}
+
+function spawnCosmonaut() {
+    if (isCosmonautVisible) return
+    isCosmonautVisible = false
+
+    const dim = document.querySelector("#dim")
+    const portal = document.querySelector(".portal");
+    const astronaut = document.querySelector(".astronaut");
+
+    dim.style.opacity = '1'
+
+    setTimeout(() => {
+        dim.style.opacity = '0'
+        portal.style.display = "none"
+    }, 4 * 1000)
+
+    portal.style.display = "block"
+    portal.play()
+    portal.playbackRate = '1.05'
+
+    setTimeout(() => {
+        astronaut.style.scale = '1'
+        astronaut.style.translate = '0 0'
+        astronaut.style.rotate = '0deg'
+        isCosmonautVisible = true
+    }, 2 * 1000);
+}

@@ -68,4 +68,3 @@ function handleFirstTime() {
 }
 
 handleFirstTime()
-

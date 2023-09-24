@@ -12,14 +12,28 @@
     object-fit: cover;
 }
 
+
+
+.portal {
+    position: absolute;
+    width:600px;
+    height:360px;
+    top: 35%;
+    right: 18%;
+    z-index: 10;
+    display: none;
+    pointer-events: none;
+    mix-blend-mode: lighten;
+}
+
 .astronaut {
     position: absolute;
     top: 10%;
     right: 5%;
     z-index: 10;
     width: 700px;
-    transition: all 1s ease;
     pointer-events: none;
+    transition: all 1s ease;
 }
 
 .glass-terminal {
@@ -88,7 +102,7 @@
     cursor: var(--cursor), auto;
     z-index: 100;
     translate: 0 3px;
-    margin-inline: 10px;
+    padding-inline: 10px;
     transition: all 200ms;
 }
 
@@ -141,6 +155,7 @@
 
 .search-item > p > span {
     color: white;
+    font-variant: small-caps;
     background: black;
     padding-inline: 3px;
     padding-block: 2px;
@@ -148,16 +163,7 @@
     border-radius: .2rem;
 }
 
-.search-item > * {
-    transition: all 0.2s;
-    /*opacity: 0.7;*/
-}
-
-.search-item:hover > * {
-    opacity: 1;
-}
-
-.search-item:hover {
+.search-item:hover, .search-item-active {
     background: #DDD;
 }
 

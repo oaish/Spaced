@@ -50,7 +50,7 @@ logout.onclick = function () {
 
 const resultClickHandler = {
     isSettingsClicked: false,
-    isMenuClicked: false
+    isSearchBoxClicked: false
 }
 
 document.onclick = function (event) {
@@ -65,6 +65,7 @@ document.onclick = function (event) {
         opts.forEach(opt => opt.style.pointerEvents = 'none')
     }
     if (!searchResult.contains(event.target)) {
+        if (resultClickHandler.isSearchBoxClicked) return
         searchResultShow('none')
     }
 };

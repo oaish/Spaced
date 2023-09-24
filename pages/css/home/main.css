@@ -116,7 +116,8 @@
 }
 
 .search-result {
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     min-height: 50px;
     max-height: 150px;
     display: none;

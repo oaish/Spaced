@@ -110,7 +110,7 @@ function begoneCosmonaut() {
     
     setTimeout(() => {
         dim.style.opacity = '0'
-        portal.style.display = "none"
+        // portal.style.display = "none"
     }, 4.2 * 1000)
 
     portal.style.display = "block"
@@ -137,7 +137,7 @@ function spawnCosmonaut() {
 
     setTimeout(() => {
         dim.style.opacity = '0'
-        portal.style.display = "none"
+        // portal.style.display = "none"
     }, 4 * 1000)
 
     portal.style.display = "block"

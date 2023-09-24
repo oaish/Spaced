@@ -12,8 +12,6 @@
     object-fit: cover;
 }
 
-
-
 .portal {
     position: absolute;
     width:600px;
@@ -33,7 +31,7 @@
     z-index: 10;
     width: 700px;
     pointer-events: none;
-    transition: all 1s ease;
+    transition: all 1s ease-out;
 }
 
 .glass-terminal {
@@ -178,5 +176,5 @@
     pointer-events: none;
     backdrop-filter: blur(10px);
     transition: 1s ease;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
 }

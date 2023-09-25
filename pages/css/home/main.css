@@ -19,7 +19,6 @@
     top: 35%;
     right: 18%;
     z-index: 10;
-    display: none;
     pointer-events: none;
     mix-blend-mode: lighten;
 }
@@ -31,7 +30,7 @@
     z-index: 10;
     width: 700px;
     pointer-events: none;
-    transition: all 1s ease-out;
+    transition: all .8s ease-out;
 }
 
 .glass-terminal {

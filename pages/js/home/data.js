@@ -81,66 +81,52 @@ const indices = [
         origin: "Mystery",
         icon: icons.easterEggIcon,
         exec: function () {
-            begoneCosmonaut()
-        }
-    },
-    {
-        text: "Cosmonaut, return!!!",
-        isLink: false,
-        origin: "Mystery",
-        icon: icons.easterEggIcon,
-        exec: function () {
-            spawnCosmonaut()
+            if (isCosmonautVisible) {
+                this.text = "Cosmonaut, return!!!"
+                begoneCosmonaut()
+            }
+            else {
+                this.text = "Cosmonaut, begone!!!"
+                spawnCosmonaut()
+            }
         }
     }
 ];
 
 let isCosmonautVisible = true
+const dim = document.querySelector("#dim")
+const portal = document.querySelector(".portal");
+const astronaut = document.querySelector(".astronaut");
 
 function begoneCosmonaut() {
     if (!isCosmonautVisible) return
     isCosmonautVisible = true
     
-    const dim = document.querySelector("#dim")
-    const portal = document.querySelector(".portal");
-    const astronaut = document.querySelector(".astronaut");
-    
     dim.style.opacity = '1'
-    astronaut.style.rotate = '-5deg'
-    
     setTimeout(() => {
-        dim.style.opacity = '0'
-        // portal.style.display = "none"
-    }, 4.2 * 1000)
+        astronaut.style.scale = '0.85'
+        astronaut.style.rotate = '-15deg'
+    }, 0.6 * 1000)
+    setTimeout(() => dim.style.opacity = '0', 4.2 * 1000)
 
-    portal.style.display = "block"
     portal.play()
     portal.playbackRate = '1.05'
 
     setTimeout(() => {
         astronaut.style.scale = '0'
         astronaut.style.translate = '-20% -20%'
-        astronaut.style.rotate = '-72deg'
+        astronaut.style.rotate = '-120deg'
         isCosmonautVisible = false
-    }, 2 * 1000);
+    }, 1.2 * 1000);
 }
 
 function spawnCosmonaut() {
     if (isCosmonautVisible) return
     isCosmonautVisible = false
 
-    const dim = document.querySelector("#dim")
-    const portal = document.querySelector(".portal");
-    const astronaut = document.querySelector(".astronaut");
-
     dim.style.opacity = '1'
+    setTimeout(() => dim.style.opacity = '0', 4 * 1000)
 
-    setTimeout(() => {
-        dim.style.opacity = '0'
-        // portal.style.display = "none"
-    }, 4 * 1000)
-
-    portal.style.display = "block"
     portal.play()
     portal.playbackRate = '1.05'
 

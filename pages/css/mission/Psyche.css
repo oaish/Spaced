@@ -1,0 +1,322 @@
+body{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#imagepsyche{
+    position: relative;
+    height: 650px;
+    width: auto;
+}
+#imagepsyche>img{
+    filter: brightness(70%);
+    height: 100%;
+    width: 100%;
+}
+#imagepsyche h1{
+    position: absolute;
+    top: 260px;
+    left: 90px;
+    font-weight: 850;
+    font-size: 80px;
+}
+#hrsearch{
+    width: 135px;
+    color: white;
+    transition: 0.24s ease;
+}
+
+#back{
+    z-index: 1;
+    position:absolute;
+    font-size: 30px; 
+    color: white;
+    top: 80px;
+    left: 80px;
+    transition: 0.24s ease;
+}
+#back:hover{
+    color: grey;   
+ } 
+#imagepsyche #ph2{
+    background-color:blue ;
+    position: absolute;
+    top: 370px;
+    left: 90px;
+}
+#circle{
+   background-color:blue ;
+    position: absolute;
+    top: 430px;
+    left: 90px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+#imagepsyche #pp1{
+    display: inline;
+    position: absolute;
+    top: 395px;
+    left:34px;
+}
+#pp2{
+    position: absolute;
+    bottom: 90px;
+    left: 90px;
+
+}
+#phr1{
+    width: 390px;
+    position: absolute;
+    bottom: 140px;
+    left: 90px;
+}
+#ph22{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 164px;
+}
+#pp3{
+    color: white;
+    position: absolute;
+    bottom: 90px;
+    left: 600px;
+}
+#ph23{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 674px;
+}
+#phr2{
+    width: 390px;
+    position: absolute;
+    bottom: 140px;
+    left: 600px;
+}
+#pp4{
+    color: white;
+    position: absolute;
+    bottom: 90px;
+    left: 1100px;
+}
+#phr3{
+    width: 390px;
+    position: absolute;
+    bottom: 140px;
+    left: 1100px;
+}
+#ph24{
+ 
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 1172px; 
+}
+#ph22:hover,#ph23:hover,#ph24:hover{
+    color: grey;
+}
+#about{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 300px;
+    padding: 25px;
+    margin-bottom: 100px;
+}
+#writing p{
+    margin-top: 100px;
+    margin-right: 60px;
+    margin-left: 70px;
+    font-size: 21px;
+}
+#details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100px;
+}
+#Type,#Launch,#Target,#Objective{
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right:10px;
+}
+#Type h2,#Launch h2,#Target h2,#Objective h2{
+    margin-left: 49px;
+    margin-top: 10px
+}
+
+#aboutPspacec{
+    padding: 5px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 500px;
+}
+#data h1,h3,p{
+    padding: 5px;
+margin-top: 26px;
+margin-left: 70px;
+margin-right: 80px;
+}
+#data h2:hover{color: grey;}
+#data p{
+    font-size: 19px;
+}
+#data h2{
+    display: inline;
+    margin-top: 54px;
+    margin-left: 70px;
+    margin-right: 16px;
+}
+#data img{
+    margin-top: 50px;
+}
+#picture img{
+    margin-top: 70px;
+    height: 340px;
+    width: 500px;
+    margin-left: 90px;
+}
+#picture h4{
+    margin-left: 90px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#overview{
+    padding: 20px;
+    margin-top: 40px;
+    
+}
+#overview h1{
+    font-size: 60px;
+    margin-left: 169px;
+}
+#overview div{
+    margin-left: 100px;
+    margin-right: 110px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#overview p{
+    font-size: 20px;
+}
+#imgofoverview{
+    width: 1100px;
+    height: 500px;
+    margin-left: 70px;
+}
+#journey h1{
+    margin-left: 180px;
+    margin-top: 30px;
+    
+}
+#journey div{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-right: 180px;
+    margin-top: 30px;
+    margin-left: 180px;
+}
+iframe{
+    margin-bottom: 30px;
+    width: 1200px;
+    margin-left: 170px;
+}
+
+#footer{
+    height: 70px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 70px;
+    color: white;
+}
+
+
+
+#footergrid1 h2{
+    margin-top: 20px;
+    margin-left: 75px;
+}
+#footergrid1 {
+    height: 100px;
+}
+#footergrid1 p{
+    font-size: 21px;
+}
+#gototop{
+ margin-left: 320px;
+    margin-top: 20px;
+   font-size: 20px;
+}
+
+#mydropdown{
+    /* display: none; */
+    color: white;
+    border: 1px solid #ddd;
+    z-index: 1;
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    background-color: #f6f6f6;
+}
+#search{
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    font-size:18px;
+    right: 162px;
+    color:white;
+    padding: 12px 16px;
+}
+#myinput{
+    
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  /* background-image: url('searchicon.jpg'); */
+}
+#anchors .anchor{
+    display: none;
+}
+.anchor{
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+}
+.anchor:hover{
+   background-color:#ddd ;
+}
+#hrsearch{
+    z-index: 1;
+    width: 125px;
+    color: white;
+    transition: 0.4s ease;
+}
+#search:hover  #hrsearch{
+transform: translateY(200%);
+}
+#gototophr{
+    width: 90px;
+    margin-left: 315px;
+}
+
+#container:hover .goto-top-bar {
+    transform: translateY(200%);
+}
+
+.goto-top-bar {
+    transition: 0.4s ease;
+    width: 90px;
+    margin-left: 315px;
+    border: solid 1px white;
+}

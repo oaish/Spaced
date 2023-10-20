@@ -14,7 +14,8 @@ const indices = [
         link: '#voyage',
         origin: "Home",
         icon: icons.homeIcon,
-        exec: function () {}
+        exec: function () {
+        }
     },
     {
         text: 'Choose your desired planet',
@@ -47,6 +48,66 @@ const indices = [
         exec: function () {
             searchResultShow('none');
             document.querySelector("#launch").click()
+        }
+    },
+    {
+        text: 'Exploring a metal asteroid',
+        isLink: true,
+        link: 'mission.html',
+        origin: "Mission",
+        icon: icons.missionIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'About the psyche spacecraft',
+        isLink: true,
+        link: 'missionPages/Psyche.html#data',
+        origin: "Mission",
+        icon: icons.missionIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'Overview of psyche',
+        isLink: true,
+        link: 'missionPages/Psyche.html#overview',
+        origin: "Mission",
+        icon: icons.missionIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'Artemis',
+        isLink: true,
+        link: 'missionPages/Artemis.html#data',
+        origin: "Mission",
+        icon: icons.missionIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'Artemis Accords',
+        isLink: true,
+        link: 'missionPages/Artemis.html#accords',
+        origin: "Mission",
+        icon: icons.missionIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'Humans in Space',
+        isLink: true,
+        link: 'missionPages/humansinspace.html',
+        origin: "Mission",
+        icon: icons.missionIcon,
+        exec: function () {
+            searchResultShow('none');
         }
     },
     {
@@ -84,8 +145,7 @@ const indices = [
             if (isCosmonautVisible) {
                 this.text = "Cosmonaut, return!!!"
                 begoneCosmonaut()
-            }
-            else {
+            } else {
                 this.text = "Cosmonaut, begone!!!"
                 spawnCosmonaut()
             }
@@ -101,7 +161,7 @@ const astronaut = document.querySelector(".astronaut");
 function begoneCosmonaut() {
     if (!isCosmonautVisible) return
     isCosmonautVisible = true
-    
+
     dim.style.opacity = '1'
     setTimeout(() => {
         astronaut.style.scale = '0.85'

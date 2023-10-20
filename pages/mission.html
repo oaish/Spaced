@@ -1,9 +1,84 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SPACED | Mission</title>
+    <script src="js/home/authorization.js"></script>
+    <script src="js/mission/mission.js" defer></script>
+    <link rel="stylesheet" href="css/home/main.css">
     <link rel="stylesheet" href="css/index/root.css">
+    <link rel="stylesheet" href="css/mission/mission1.css">
+    <title>SPACED | Mission</title>
 </head>
 <body>
+<div id="main">
+    <div id="container">
+        <div class="slide artemis">
+            <img id="artemisimg" src="./img/artemisslider.png" alt="">
+            <h3>Story</h3>
+            <h2>Agency</h2>
+            <h1 class="texth1">we are exploring the Moon for scientific discovery, technology advancement, and to learn
+                how to live and work on another world as we prepare for human missions to Mars. </h1>
+
+            <h4 id="h41">11/10/23</h4>
+            <h4 id="h42">875 Views</h4>
+            <h4 id="h43">38 Likes</h4>
+
+            <a href="missionPages/Artemis.html"><p id="artemisP">Read</p></a>
+        </div>
+
+        <div class="slide humaninspace">
+            <img id="humansinspacemain" src="./img/humansinspacemain.png" alt="">
+            <h3>Story</h3>
+            <h2>Agency</h2>
+            <h1 id="texth1">The reasons to explore the universe are as vast and varied as the reasons to explore the
+                forests, the mountains, or the sea. Since the dawn of humanity, people have explored to learn about the
+                world around them, find new resources, and improve their existence. </h1>
+
+            <h4 id="h41">11/10/23</h4>
+            <h4 id="h42">875 Views</h4>
+            <h4 id="h43">38 Likes</h4>
+
+            <a href="missionPages/humansinspace.html"><p id="artemisP">Read</p></a>
+        </div>
+
+        <div class="slide psyche">
+            <img id="psycheimg" src="./img/psycheasteroid.png" alt="">
+            <h3>Story</h3>
+            <h2>Agency</h2>
+            <h1 class="psychetext">Exploring a Metal <br>Asteroid</h1>
+
+            <h4 id="h41">11/10/23</h4>
+            <h4 id="h42">112k Views</h4>
+            <h4 id="h43">60k Likes</h4>
+
+            <a href="missionPages/Psyche.html"><p id="artemisP">Read</p></a>
+        </div>
+
+        <button id="btnleft" class="btn left" onclick="plusSlide(-1)"><</button>
+        <button id="btnright" class="btn right" onclick="plusSlide(1)">></button>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div id="spaced"><h3>SPACED - A Space Exploration Agency</h3></div>
+    <div id="home">
+        <a href="home.html"><h3>Home</h3></a>
+        <div id="bar1">
+
+        </div>
+    </div>
+    <div id="Gallery">
+        <a href="gallery.html"><h3>Gallery</h3></a>
+        <div id="bar2">
+
+        </div>
+    </div>
+    <div id="About">
+        <a href="about.html"><h3>About</h3></a>
+        <div id="bar3">
+
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/mission/Artemis.js" defer></script>
+    <script src="../js/mission/authorization.js"></script>
+
+    <link rel="stylesheet" href="../css/home/main.css"/>
+    <link rel="stylesheet" href="../css/index/root.css"/>
+    <link rel="stylesheet" href="../css/mission/Artemis.css"/>
+    <title>SPACED | Mission - Artemis</title>
+</head>
+<body>
+<div id="artemisvideo">
+    <video
+            src="../img/Artemislogoreveal.mp4"
+            type="video/mp4"
+            muted
+            autoplay
+    ></video>
+    <a href="../mission.html"><h3 id="back">Back</h3></a>
+    <div id="search">
+        <h1>search this page</h1>
+        <hr id="hrsearch">
+    </div>
+    <div id="mydropdown">
+        <input
+                type="text"
+                placeholder="Search.."
+                id="myinput"
+
+                onkeyup="filter()"
+
+        />
+        <div id="anchors">
+            <a class="anchor" href="#body1">Latest News</a>
+            <a class="anchor" href="#ArtemisMission">Artemis Mission</a>
+            <a class="anchor" href="#Whywego">Why we are going to moon</a>
+            <a class="anchor" href="#Howwego">How we explore the moon</a>
+            <a class="anchor" href="#accords">Artemis Accords</a>
+        </div>
+    </div>
+</div>
+<div id="Header">
+    <div id="header1">
+        <h3 id="headerh3">The Moon is a 4.5-billion-year-old time capsule</h3>
+        <br/>
+        <h1>ARTEMIS</h1>
+        <br/>
+        <p>
+            With Artemis missions, we are exploring the Moon for scientific
+            discovery, technology advancement, and to learn how to live and work
+            on another world as we prepare for human missions to Mars. We will
+            collaborate with commercial and international partners and establish
+            the first long-term presence on the Moon. NASA will land the first
+            woman and first person of color on the Moon, using innovative
+            technologies to explore more of the lunar surface than ever before.
+        </p>
+
+    </div>
+
+    <div id="infoslider">
+        <hr id="hrslide">
+        <p>Qick&nbsp&nbspFacts</p>
+        <div id="factslider">
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>The Moon is lemon-shaped.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/moonislemon.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>Heat from the Big Bang is still around today.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/bigbang.jpg" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>The Sun loses a billion kilos per second.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/sun.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>Neptune has only completed one orbit around the Sun since its discovery.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/neptune.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>Black holes have theoretical opposites known as white holes.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/whiiteholes.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>There are stars we will never be able to see.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/stars.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>
+                        Gamma-ray bursts can release more energy in 10 seconds than our Sun will in its entire
+                        life.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/gammarays.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>You could survive for a couple of minutes in a leaky spacesuit.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/leakingsuit.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>Mercury is Still Shrinking.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/merc.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>1 tsp of neutron star weighs the same as the human population.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/neutron.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>Milky Way smells of rum, raspberries and booze.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/rum.png" alt="">
+                </div>
+            </div>
+            <div class="factslide">
+                <div class="textfact">
+                    <h4>On Mercury a day is twice as long as a year.</h4>
+                </div>
+                <div class="imgfact">
+                    <img src="../img/mercury.png" alt="">
+                </div>
+            </div>
+            <button onclick="slidefact(-1)" class="btn left"><</button>
+            <button onclick="slidefact(1)" class="btn right">></button>
+        </div>
+    </div>
+</div>
+
+<div id="body1">
+    <div class="latestnews"><h1>Latest News</h1></div>
+    <div class="slider">
+        <div class="slide">
+            <a
+                    href="https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii-moon-mission/"
+            ><img src="../img/art1.png" alt=""
+            /></a>
+        </div>
+        <div class="slide">
+            <a
+                    href="https://www.nasa.gov/centers-and-facilities/marshall/artemis-ii-sls-rocket-booster-segments-arrive-to-kennedy-space-center/"
+                    alt=""
+            ><img src="../img/art2.png" alt=""
+            /></a>
+        </div>
+        <div class="slide">
+            <a
+                    href="https://www.nasa.gov/humans-in-space/worldwide-team-makes-orions-first-artemis-mission-possible/"
+            ><img src="../img/art3.png" alt=""
+            /></a>
+        </div>
+        <div class="slide">
+            <a
+                    href="https://www.nasa.gov/centers-and-facilities/hq/splashdown-nasas-orion-returns-to-earth-after-historic-moon-mission"
+            ><img src="../img/art4.png" alt=""
+            /></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<div id="ArtemisMission">
+    <h2>Learn More about Artemis Missions</h2>
+    <br/><br/>
+    <hr width="90%"/>
+    <br/>
+    <div id="artemismissiongrid">
+        <div id="a1">
+            <img src="../img/Artemis_logo.webp" alt="artemis-logo"/>
+            <img src="../img/Artemis_logo.webp" alt="artemis-logo"/>
+            <img src="../img/Artemis_logo.webp" alt="artemis-logo"/>
+        </div>
+
+        <div id="a2">
+            <h1>Artemis I</h1>
+            <h1 id="h2">Artemis II</h1>
+            <h1 id="h3">Artemis III</h1>
+        </div>
+
+        <div id="a3">
+            <p>
+                Artemis I was an uncrewed flight test of the Space Launch System and
+                the Orion <br/>
+                spacecraft around the Moon.
+            </p>
+            <p id="p2">
+                Artemis II will be the first crewed flight test of the Space Launch
+                System and the Orion <br/>spacecraft around the Moon.
+            </p>
+            <p id="p3">
+                Artemis III will send the first humans to explore the region near
+                the lunar South Pole.
+            </p>
+        </div>
+    </div>
+</div>
+<hr/>
+
+<div id="Whywego">
+    <div id="whygrid1">
+        <h4>Artemis</h4>
+        <br/>
+        <h1 id="whyh1">Why We Are Going <br/>To The Moon</h1>
+        <br/><br/>
+        <p>
+            We’re going back to the Moon for scientific discovery, economic
+            benefits, and inspiration for a new generation of explorers: the
+            Artemis Generation. While maintaining American leadership in
+            exploration, we will build a global alliance and explore deep space
+            for the benefit of all.
+        </p>
+        <br/>
+        <h3 id="whywegoh2">More About Why We Go</h3>
+        <img class="next" src="../img/next.png" alt=""/>
+    </div>
+
+    <div id="whygrid2">
+        <img id="whyimg" src="../img/moon.webp" alt=""/>
+    </div>
+</div>
+<hr/>
+<div id="Howwego">
+    <br/>
+    <h1>How We Explore the Moon</h1>
+    <br/>
+    <p>
+        Together, the Orion spacecraft, SLS rocket, Gateway, human landing
+        systems, and advanced spacesuits represent the core of NASA’s
+        infrastructure <br/>for long-term human exploration at the Moon.
+    </p>
+    <br/>
+    <br/>
+    <div id="howwegogrid">
+        <div class="howwegodiv">
+            <img class="imghowwego" src="../img/p1.webp" alt=""/><br/><br/>
+            <h3>Getting to the Moon</h3>
+            <br/>
+            <p>
+                Learn about the systems that carry <br/>astronauts to the Moon.
+            </p>
+            <br/>
+            <h2 class="howwegoh2">Read More</h2>
+            <img class="next" src="../img/next.png" alt=""/>
+        </div>
+
+        <div class="howwegodiv">
+            <img class="imghowwego" src="../img/p2.webp" alt=""/><br/><br/>
+            <h3>In Lunar Orbit</h3>
+            <br/>
+            <p>
+                Learn about living and working aboard <br/>
+                Gateway in lunar orbit.
+            </p>
+            <br/>
+            <h2 class="howwegoh2">Read More</h2>
+            <img class="next" src="../img/next.png" alt=""/>
+        </div>
+
+        <div class="howwegodiv">
+            <img class="imghowwego" src="../img/p3.webp" alt=""/><br/><br/>
+            <h3>On the Lunar Surface</h3>
+            <br/>
+            <p>
+                Learn about systems to live and work on <br/>the surface of the
+                Moon.
+            </p>
+            <br/>
+            <h2 class="howwegoh2">Read More</h2>
+            <img class="next" src="../img/next.png" alt=""/>
+        </div>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/>
+<hr/>
+<div id="accords">
+    <div id="accordsgrid1">
+        <h1>Artemis Accords</h1>
+        <br/>
+        <h3>We Go Together.</h3>
+        <br/><br/>
+        <p>
+            The Artemis Accords are grounded in the Outer Space Treaty of 1967,
+            outlining the vision and principles for a safe, transparent
+            environment that facilitates exploration, science, and commercial
+            activities for all of humanity to enjoy. To date, 24 countries have
+            joined the accords and are committed to establishing a peaceful,
+            prosperous future in space. More countries will sign the Artemis
+            Accords in the months and years ahead to ensure the entire world can
+            benefit from our journey of exploration and discovery.
+        </p>
+        <br/>
+        <h3 id="accordsh3" class="howwegoh2">More About Why We Go</h3>
+        <img class="next" src="../img/next.png" alt=""/>
+    </div>
+
+    <div id="accordsgrid2">
+        <img id="whyimg" src="../img/artemis_accords.webp" alt=""/><br/><br/>
+        <p id="accordsp">
+            This graphic displays the flags of the nations that have signed the
+            Artemis Accords against a background image of the Moon in the
+            blackness of space. The graphic is titled “Artemis Accords.” The
+            words, “United for Peaceful Exploration of Deep Space” appear on the
+            bottom of the image.
+        </p>
+    </div>
+</div>
+<br/>
+<hr/>
+<br/>
+
+<div id="footer">
+    <div id="footergrid1">
+        <h2>Spaced</h2>
+        <br/><br/>
+        <p>
+            Spaced - xplores the unknown in air and space, innovates for the
+            benefit of humanity, and inspires the world through discovery.
+        </p>
+        <br/><br/>
+    </div>
+
+    <div id="footergrid2">
+        <a href="#back">
+            <div id="gototop">Go to Top</div>
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -48,7 +48,7 @@ header {
     width: 55px;
 }
 
-.item-btn:focus {
+.item-btn:active {
     filter: invert(35%) sepia(72%) saturate(743%) hue-rotate(136deg) brightness(93%) contrast(103%);
 }
 

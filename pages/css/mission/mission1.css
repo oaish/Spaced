@@ -1,0 +1,227 @@
+body{
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+#main{
+    position: relative;
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+}
+#container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide, .slide > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.artemis{
+    position: relative;
+}
+
+#artemisimg{  
+    filter: brightness(70%);
+    position: relative;
+}
+.artemis{
+    position: relative;
+}
+.artemis h3{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+.artemis h2{
+    background-color:blue;
+    color: white;
+    position: absolute;
+    margin-top: 26px;
+    top: 150px;
+    left: 150px;
+}
+.artemis h1{
+    color: white;
+    position: absolute;
+    top: 190px;
+    margin-top: 60px;
+    margin-left: 150px;
+    margin-right: 450px
+}
+.artemis h4{
+    color: white;
+   
+}
+#h41{
+    position: absolute;
+    top: 390px;
+    left: 150px;
+    margin-top: 60px;
+    display: inline;
+    margin-left: 30px;
+    margin-right: 30px
+}
+#h42{
+    position: absolute;
+    top: 390px;
+    left: 240px;
+    margin-top: 60px;
+    display: inline;
+    margin-left: 30px;
+    margin-right: 30px
+}
+#h43{
+    position: absolute;
+    top: 390px;
+    left: 340px;
+    margin-top: 60px;
+    display: inline;
+    margin-left: 30px;
+    margin-right: 30px
+}
+#humansinspacemain{
+    filter: brightness(70%);
+}
+.btn {
+    cursor: pointer;
+    all: unset;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    translate: 0 -200%;
+    font-size: 60px;
+}
+.btn:hover{
+    color:grey;
+    cursor: pointer;
+}
+.left {
+    display: none;
+    left: 20px;
+}
+
+.right {
+    display: none;
+    right: 0;
+}
+#artemisP{
+    background-color: white;
+    color: blue;
+    position: absolute;
+    top: 490px;
+    left: 180px;
+    padding: 20px;
+}
+#artemisP:hover{
+    opacity: 0.6;
+}
+
+#footer{
+    height: 600px;
+}
+
+#main:hover .btn{
+    display: block;
+}
+.humaninspace h3{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+.humaninspace h2{
+    background-color:blue;
+    color: white;
+    position: absolute;
+    margin-top: 26px;
+    top: 150px;
+    left: 150px;
+}
+.humaninspace h1{
+    color: white;
+    position: absolute;
+    top: 190px;
+    margin-top: 60px;
+    margin-left: 150px;
+    margin-right: 450px 
+}
+.psyche h2{
+    background-color:blue;
+    color: white;
+    position: absolute;
+    margin-top: 26px;
+    top: 150px;
+    left: 150px;
+}
+.psyche h1{
+    color: white;
+    position: absolute;
+    top: 190px;
+    margin-top: 60px;
+    margin-left: 150px;
+    margin-right: 450px 
+    
+}
+.psychetext{
+    font-weight: 900;
+    font-size: 50px;
+}
+.psyche h3{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+#footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 80px;
+}
+#footer h3{
+   padding: 21px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#bar1{
+    /* margin-top: 40px; */
+    transition: 0.4s ease;
+    width: 50px;
+    margin-left: 19px;
+    border: solid 1px white;
+
+}
+#bar2{
+    transition: 0.4s ease;
+    width: 60px;
+    margin-left: 18px;
+    border: solid 1px white;
+
+}
+#bar3{
+    transition: 0.4s ease;
+    width: 50px;
+    margin-left: 19px;
+    border: solid 1px white;
+}
+#home:hover #bar1{
+    transform: translateY(-1200%);
+}
+#Gallery:hover #bar2{
+    transform: translateY(-1200%);
+}
+#About:hover #bar3{
+    transform: translateY(-1200%);
+}

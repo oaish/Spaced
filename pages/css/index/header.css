@@ -3,22 +3,26 @@
 header {
     position: sticky;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+    color: #FFF;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 200ms ease;
-    background: #FFF;
-    text-transform: uppercase;
+    background: #000;
+    font-variant: small-caps;
+    align-items: center;
+    justify-content: space-between;
+    border-block: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    padding-inline: 50px;
 }
 
-header > a {
+a {
     cursor: var(--pointer), auto;
     text-decoration: none;
+}
+
+.header-logo {
     color: white;
-    margin-left: 100px;
 }
 
 #spaced {
@@ -26,24 +30,10 @@ header > a {
     width: 200px;
 }
 
-nav {
-    display: flex;
-    margin-right: 100px;
-    gap: 20px;
+.social {
+    transition: all 300ms ease;
 }
 
-nav > button {
-    all: unset;
-    list-style: none;
-}
-
-nav > button > a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-    transition: all 200ms ease;
-}
-
-nav > button:hover {
-    border-bottom: 2px solid #1892a6;
+.social:hover {
+    scale: 1.05;
 }

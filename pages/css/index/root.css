@@ -49,3 +49,8 @@ input[type="text"] {
     scrollbar-color: #888 #111;
     scrollbar-width: thin;
 }
+
+::-ms-reveal,
+::-ms-clear {
+    display: none;
+}

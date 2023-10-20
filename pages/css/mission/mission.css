@@ -1,0 +1,83 @@
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items:center; 
+}
+
+.logo{
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 12px;
+    backdrop-filter:blur(10px);  
+   
+}
+
+.logo > img{
+    height: 115px;
+    width: 400px;
+    margin: 10px 100px;
+}
+
+
+.navbar{
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 300px;
+    top: 0;
+    left: 170px;
+    padding: 20px 8px;  
+  
+}
+
+.hambergur > img{
+    height: 80px;
+    width:80px;   
+}
+
+
+.background-video{
+    z-index: -1;
+    position: absolute;
+    height: auto;
+    width: 100%;
+
+}
+.mission-slider {
+    color: white;
+    /* opacity: 0; */
+    /* pointer-events: none; */
+    border: 2px solid white;
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.abc{
+    height:  15px;
+    width: 0px;
+    background-color: white;
+    border: 1px solid white;
+    transition: width 0.24s;
+  
+}
+
+.ul:hover  .abc{
+    width:190px;
+}
+
+
+
+.mission-slider > ul{
+list-style: none;
+}
+.mission-slider > ul a{
+    text-decoration: none;
+    color: white;
+}
+

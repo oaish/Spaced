@@ -6,50 +6,50 @@ let matchedResults = []
 let searchItemCount = -1
 searchBox.value && clearBtnShow() // Persists the clear button after reload
 
-searchBox.oninput = handleSearchBoxInput  
+searchBox.oninput = handleSearchBoxInput
+
 function handleSearchBoxInput() {
     searchResult.innerHTML = ""
     searchItemCount = -1
     const text = searchBox.value.trim().toLowerCase();
-    
+
     if (text === "") {
         searchResultShow('none')
         clearBtnHide()
         return
-    }
-    else clearBtnShow()
+    } else clearBtnShow()
 
     matchedResults = []
     indices.forEach(index => {
         const isMatched = index.text.toLowerCase().trim().includes(text)
-        if (isMatched) { 
-            matchedResults.push(index) 
+        if (isMatched) {
+            matchedResults.push(index)
         }
     })
-    
+
     if (matchedResults.length > 0) {
         matchedResults.forEach(result => {
             const searchItem = document.createElement("div");
-            searchItem.classList.add("search-item"); 
-            
+            searchItem.classList.add("search-item");
+
             searchItem.addEventListener("click", () => {
                 if (result.isLink) {
                     window.location.href = result.link
                 }
-                searchResultShow('none'); 
-                clearBtn.click() 
-                result.exec(); 
+                searchResultShow('none');
+                clearBtn.click()
+                result.exec();
             });
-            
-            const textToReplace = `<strong class="strong-text">${text}</strong>` 
-            const searchItemText = result.text.toLowerCase().replace(text, textToReplace) 
-            
+
+            const textToReplace = `<strong class="strong-text">${text}</strong>`
+            const searchItemText = result.text.toLowerCase().replace(text, textToReplace)
+
             searchItem.innerHTML = `
-                <img src="${result.icon}" width="24" height="24" alt=""> 
+                <img src="${result.icon}" width="20" height="20" alt=""> 
                 <p>${searchItemText} - <span>${result.origin}</span></p>
             `;
 
-            searchResult.appendChild(searchItem); 
+            searchResult.appendChild(searchItem);
         })
         searchResultShow('block')
     } else {
@@ -70,23 +70,23 @@ searchBox.onkeydown = function (e) {
     if (key === 13 && (searchItemCount > -1 && searchItemCount < resultsCount)) {
         searchResult.children[searchItemCount].click()
     }
-    
+
     if (key === 38 && searchItemCount !== -1) {
         if (searchItemCount < resultsCount)
             searchResult.children[searchItemCount].classList.remove("search-item-active")
         searchItemCount--
-        if (searchItemCount !== -1) 
+        if (searchItemCount !== -1)
             searchResult.children[searchItemCount].classList.add("search-item-active")
-        else{
+        else {
             searchItemCount = resultsCount - 1
-            searchResult.scrollTop = searchResult.scrollHeight 
+            searchResult.scrollTop = searchResult.scrollHeight
             searchResult.children[searchItemCount].classList.add("search-item-active")
         }
-        
+
         if (searchItemCount <= resultsCount - 3)
             searchResult.scrollTop -= 50
     }
-    
+
     if (key === 40 && searchItemCount < resultsCount) {
         if (searchItemCount > -1)
             searchResult.children[searchItemCount].classList.remove("search-item-active")
@@ -100,11 +100,11 @@ searchBox.onkeydown = function (e) {
             searchResult.scrollTop = 0
             searchResult.children[searchItemCount].classList.add("search-item-active")
         }
-        
+
         if (searchItemCount >= 3)
             searchResult.scrollTop += 50
-    } 
-        
+    }
+
 }
 
 clearBtn.onclick = function () {
@@ -128,8 +128,7 @@ function searchResultShow(type) {
         searchBar.style.borderRadius = ".4rem"
         searchResult.innerHTML = ""
         searchItemCount = -1
-    } 
-    else searchBar.style.borderRadius = ".4rem .4rem 0 0"
+    } else searchBar.style.borderRadius = ".4rem .4rem 0 0"
 }
 
 /*

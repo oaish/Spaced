@@ -111,6 +111,66 @@ const indices = [
         }
     },
     {
+        text: 'Hubble Telescope Images',
+        isLink: true,
+        link: 'galleryPages/hubble.html',
+        origin: "Gallery",
+        icon: icons.galleryIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'NASA Scientist',
+        isLink: true,
+        link: 'gallery.html#nasa-scientist',
+        origin: "Gallery",
+        icon: icons.galleryIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'ISRO Scientist',
+        isLink: true,
+        link: 'gallery.html#isro-scientist',
+        origin: "Gallery",
+        icon: icons.galleryIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'Spitzer Telescope Images',
+        isLink: true,
+        link: 'galleryPages/hubble.html',
+        origin: "Gallery",
+        icon: icons.galleryIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'Chandra Telescope Images',
+        isLink: true,
+        link: 'galleryPages/chandra.html',
+        origin: "Gallery",
+        icon: icons.galleryIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
+        text: 'falcon mission stats',
+        isLink: true,
+        link: 'aboutPages/falcon.html#stats',
+        origin: "About",
+        icon: icons.aboutIcon,
+        exec: function () {
+            searchResultShow('none');
+        }
+    },
+    {
         text: 'Sign Out',
         isLink: false,
         origin: "Settings",

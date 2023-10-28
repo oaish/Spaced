@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Spaced</title>
+   <link rel="stylesheet" href="css/gallery/index.css">
+</head>
+
+<body >
+   
+   <!-- Menu code -->
+   <div class="menu">
+      <div class="menulogo">
+        <img class="menuimg" src="img/dropdown.png" alt="" onclick="menu_show()">
+      </div>
+      <div class="allmenus-show" id="allmenus">
+         <input type="hidden" value="0" name="menuStatus" id="menuStatus">
+         <div class="home blur-menu">
+            <a href="home.html"><img class="menuimg" src="img/home.png" alt=""></a>
+         </div>
+         <div class="about blur-menu">
+            <a href="about.html"><img class="menuimg" src="img/aboutus.png" alt=""></a>
+         </div>
+         <div class="gallery blur-menu">
+            <a href="gallery.html"><img class="menuimg" src="img/galleryicon.png" alt=""></a>
+         </div>
+         <div class="missions blur-menu">
+            <a href="mission.html"><img class="menuimg2" src="img/mission2.png" alt=""></a>
+         </div>
+      </div>
+    </div>  
+  
+    <div class="spacedimg">
+      <div class="spaced-logo-div">
+      <img class="spacedlogo" src="img/Spaced.png" alt=""></div>
+      
+     <!-- <div class="search-box">
+      <div class="row">
+        <input type="text" placeholder=" Search..." id="search-input" autocomplete="off">
+        <button><img src="img/searchicon-2.png" alt="" class="search-icon-img"></button>
+      </div>
+      <div class="result-box">
+        
+      </div>
+     </div> -->
+    </div>
+
+  </div>
+
+
+   <!--Satellite code starts-->
+   <div class="satellite-container">
+      <div class="satellite-card">
+         <img src="img/hubble_tele.png" alt="" class="up-down-img hubble-img">
+         <h2>Hubble Telescope</h2>
+         <a href="galleryPages/hubble.html"><button>Click Me</button></a>
+      </div>
+      <div class="satellite-card">
+         <img src="img/spitzer.png" alt="" class="up-down-img spitzer-img">
+         <h2>Spitzer Telescope</h2>
+         <a href="galleryPages/spitzer.html"><button>Click Me</button></a>
+      </div>
+      <div class="satellite-card">
+         <img src="img/chandra x-ray.png" alt="" class="up-down-img chandra-img">
+         <h2>Chandra X-Ray Telescope</h2>
+         <a href="galleryPages/chandra.html"><button>Click Me</button></a>
+      </div>
+   </div>
+<!--Satellite code ends-->
+<!-- rocket gallery code starts-->
+<div class="container-rocket1">
+   <div class="rocket1"><img src="img/rocket1_.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+        <div class="text-rocket">Starlink Mission</div>
+      </div>
+   </div>
+   <div class="rocket2"><img src="img/rocket3.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+         <div class="text-rocket">Starship Test Flig</div>
+      </div>
+   </div>
+   <div class="rocket3"><img src="img/rocket2.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+        <div class="text-rocket">Intelsat IS-40e Mission</div>
+      </div>
+   </div>      
+</div>
+
+<div class="container-rocket2">
+   <div class="rocket4"><img src="img/rocket4.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+         <div class="text-rocket">NASA CRS 27 Mission</div>
+       </div>
+   </div>
+   <div class="rocket5"><img src="img/rocket5.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+         <div class="text-rocket">NASA Crew-6 Mission</div>
+       </div>
+   </div>
+   <div class="rocket6"><img src="img/rocket6.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+         <div class="text-rocket">SDA Mission</div>
+       </div>
+   </div>
+</div>
+
+<div class="container-rocket3">
+   <div class="rocket7"><img src="img/rocket7.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+         <div class="text-rocket">Starlink Mission</div>
+       </div>
+   </div>
+   <div class="rocket8"><img src="img/rocket8.jpg" alt="" class="rocketimg">
+      <div class="overlay-rocket">
+         <div class="text-rocket">Starlink Mission</div>
+       </div>
+   </div>
+</div>
+<!-- rocket gallery code ends-->
+
+   <!--Nasa Scientists code starts-->
+   <div class="container">
+      <div class="agency"><img src="img/nasalogo.png" alt=""></div>
+      <button id="left-scroll-btn" onclick="handleScrollLeft()"><</button>
+      <button id="right-scroll-btn" onclick="handleScrollRight()">></button>
+      <div class="scroll">
+         <div class="card-x"><img src="img/scientist1.jpg" alt="" id="nasa-sci-1"><h4>Xianzhe Jia</h4></div>
+         <div class="card-x"><img src="img/scientist2.jpg" alt="" id="nasa-sci-2"><h4>Brent Buffington</h4></div>
+         <div class="card-x"><img src="img/scientist3.jpg" alt="" id="nasa-sci-3"><h4>Jia-Rui Cook</h4></div>
+         <div class="card-x"><img src="img/scientist4.jpg" alt="" id="nasa-sci-4"><h4>Umut Yildiz</h4></div>
+         <div class="card-x"><img src="img/scientist5.jpg" alt="" id="nasa-sci-5"><h4>Ashwin Vasawada</h4></div>
+         <div class="card-x"><img src="img/scientist6.jpg" alt="" id="nasa-sci-6"><h4>Rob Maning</h4></div>
+         <div class="card-x"><img src="img/scientist7.jpg" alt="" id="nasa-sci-7"><h4>Maria Zuber</h4></div>
+         <div class="card-x"><img src="img/scientist8.jpg" alt="" id="nasa-sci-8"><h4>Curt Neber</h4></div>
+      </div>
+   </div>
+   <!-- isro scientists code starts -->
+   <div class="container2">
+      <div class="agency2"><img src="img/isrologofinal.png" alt=""></div>
+      <button id="left-scroll-btn2" onclick="handleScrollLeft2()"><</button>
+      <button id="right-scroll-btn2" onclick="handleScrollRight2()">></button>
+      <div class="scroll2">
+         <div class="card-x2"><img src="img/indosci1.webp" alt="" id="isro-sci-1"><h4>Shri Somanath</h4></div>
+         <div class="card-x2"><img src="img/indosci2.webp" alt="" id="isro-sci-2"><h4>P.K Mishra</h4></div>
+         <div class="card-x2"><img src="img/indosci3.webp" alt="" id="isro-sci-3"><h4>Ajit Doval</h4></div>
+         <div class="card-x2"><img src="img/indosci4.webp" alt="" id="isro-sci-4"><h4>Rajiv Gauba</h4></div>
+         <div class="card-x2"><img src="img/indosci5.webp" alt="" id="isro-sci-5"><h4>Ajay Kumar Sood</h4></div>
+         <div class="card-x2"><img src="img/indosci6.webp" alt="" id="isro-sci-6"><h4>Maheshwar Rao</h4></div>
+         <div class="card-x2"><img src="img/indosci7.webp" alt="" id="isro-sci-7"><h4>Vinay Mohan</h4></div>
+         <div class="card-x2"><img src="img/indosci8.webp" alt="" id="isro-sci-8"><h4>T.V Somanathan</h4></div>
+      </div>
+   </div>
+
+   <!--Scientists code ends-->
+   <script src="js/gallery/script.js">
+   </script>
+</body>
+</html>

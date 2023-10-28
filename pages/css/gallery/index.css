@@ -1,0 +1,457 @@
+#left-scroll-btn, #left-scroll-btn2, #right-scroll-btn, #right-scroll-btn2 {
+    background-color: #fff;
+    color: #111;
+    height: 70px;
+    width: 30px;
+    z-index: 100;
+    font-size: larger
+}
+
+.satbtn, button {
+    font-weight: 700;
+    cursor: pointer
+}
+
+.img, .middle, .up-down-img {
+    transition: .5s
+}
+
+#FullImageView, .middle, .title {
+    text-align: center
+}
+
+#CloseButton, #closeviewbtn, .menuimg, .satbtn, button {
+    cursor: pointer
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgba(1, 1, 1, .885);
+    background-image: url('../../img/spacedbg.avif')
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+.menuimg {
+    height: 38px;
+    padding: 10px
+}
+
+.menuimg2 {
+    height: 80px;
+    width: 65px
+}
+
+.spacedimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 120px;
+    float: right;
+    position: relative
+}
+
+.result-box ul {
+    border-top: 1px solid #999;
+    padding: 10px 8px
+}
+
+.result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    padding: 10px 8px;
+    cursor: pointer
+}
+
+.result-box ul li :hover {
+    background: #999
+}
+
+.search-icon-img {
+    height: 22px;
+    background: 0 0
+}
+
+.search-box {
+    z-index: 1;
+    background: 0 0;
+    width: 40%;
+    margin: auto;
+    border-radius: 3px
+}
+
+.row {
+    background: 0 0;
+    display: flex;
+    align-items: center;
+    padding: 7px 12px
+}
+
+input {
+    flex: 1;
+    height: 30px;
+    font-size: 18px
+}
+
+.spaced-logo-div {
+    width: 50%;
+    height: 120px
+}
+
+.spacedlogo {
+    width: 65%;
+    height: 95%
+}
+
+.menu {
+    position: absolute;
+    display: table-column;
+    width: 6%;
+    height: 320px;
+    float: left
+}
+
+.card, .rocket1, .rocket3, button {
+    position: relative
+}
+
+.up-down-img {
+    animation-name: infiniteupdown;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease
+}
+
+@keyframes infiniteupdown {
+    0%, 100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-15px)
+    }
+}
+
+.card-x, .card-x2 h4 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.satbtn, .text-rocket, button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#left-scroll-btn, #left-scroll-btn2 {
+    left: 250px
+}
+
+#right-scroll-btn, #right-scroll-btn2 {
+    right: 0
+}
+
+.card {
+    width: 30%;
+    background-color: #000;
+    border-radius: 20%;
+    left: 100px;
+    top: 100px;
+    display: inline-block;
+    padding: 5px
+}
+
+.img img {
+    width: 100%
+}
+
+.title {
+    color: #f0f8ff;
+    font-size: 30px;
+    margin: 20px
+}
+
+button {
+    margin: 20px;
+    padding: 5px;
+    top: 0;
+    font-size: 15px
+}
+
+button:hover {
+    color: #f7f1f1;
+    background-color: #6d7272
+}
+
+.container1 .card .img img {
+    transition: .3s linear
+}
+
+.container1 .card .img:hover img {
+    transform: scale(1.1)
+}
+
+.container-rocket1, .container-rocket2, .container-rocket3 {
+    display: flex;
+    height: 350px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px
+}
+
+.chandra-img, .hubble-img {
+    height: 400px;
+    width: 229px
+}
+
+.rocket1, .rocket3 {
+    height: 350px;
+    width: 38%
+}
+
+.hoverimg:hover .middle, .rocket1:hover .overlay-rocket, .rocket2:hover .overlay-rocket, .rocket3:hover .overlay-rocket, .rocket4:hover .overlay-rocket, .rocket5:hover .overlay-rocket, .rocket6:hover .overlay-rocket, .rocket7:hover .overlay-rocket, .rocket8:hover .overlay-rocket {
+    opacity: 1
+}
+
+.text-rocket {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    margin: auto;
+    left: 10px;
+    bottom: 5px
+}
+
+.rocket2, .rocket5 {
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+.overlay-rocket {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    background: #1111116b
+}
+
+.rocket2, .rocket4, .rocket5, .rocket6 {
+    position: relative;
+    height: 350px
+}
+
+.rocket2 {
+    width: 20%
+}
+
+.rocket4 {
+    width: 32%
+}
+
+.rocket5 {
+    width: 44%
+}
+
+.rocket6 {
+    width: 20%
+}
+
+.rocket7, .rocket8 {
+    height: 350px;
+    width: 48%;
+    position: relative
+}
+
+.rocket7 {
+    margin-right: 10px
+}
+
+.rocketimg {
+    width: 100%;
+    height: 100%
+}
+
+.satellite-container {
+    margin-top: 40px;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: space-around
+}
+
+.satellite-card {
+    border: 1px solid #fff;
+    background-color: #000;
+    border-radius: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.satellite-card img {
+    width: 400px
+}
+
+.container, .container2 {
+    width: 100vw;
+    height: 250px;
+    display: grid;
+    grid-template-columns:250px 1fr;
+    position: relative
+}
+
+.agency, .agency2 {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.agency2 > img, .agency > img {
+    width: 200px
+}
+
+.scroll, .scroll2 {
+    scroll-behavior: smooth;
+    margin-top: 20px;
+    display: flex;
+    overflow: hidden
+}
+
+.scroll img, .scroll2 img {
+    height: 90%
+}
+
+.container2 > button, .container > button {
+    position: absolute;
+    border: 2px solid #000;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    z-index: 10;
+    translate: 0 -100%;
+    background-color: transparent
+}
+
+.card-x, .card-x2 {
+    width: 250px
+}
+
+.card2 {
+    width: 40%;
+    height: 60%;
+    background-color: #000;
+    border-radius: 0;
+    margin-left: 55px;
+    top: 100px;
+    display: inline-block;
+    padding: 0
+}
+
+.card3, .card4 {
+    width: 40%;
+    background-color: #000;
+    border-radius: 0;
+    margin-left: -10px;
+    display: inline-block
+}
+
+.card3 {
+    top: 150px
+}
+
+.card4 {
+    top: 200px;
+    padding-bottom: 10px
+}
+
+.satbtn {
+    margin: 20px;
+    padding: 5px;
+    position: relative;
+    left: 405px;
+    top: 0;
+    bottom: 10px;
+    font-size: 15px
+}
+
+#CloseButton, #closeviewbtn, .middle {
+    position: absolute
+}
+
+.img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    backface-visibility: hidden
+}
+
+.middle {
+    opacity: 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.hoverimg:hover .img {
+    opacity: .6
+}
+
+.viewtext {
+    font-size: 30px;
+    color: #f0f8ff;
+    text-decoration: none
+}
+
+#FullImageView {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    position: fixed;
+    inset: 0
+}
+
+#FullImage {
+    padding: 24px;
+    max-width: 98%;
+    max-height: 98%
+}
+
+#CloseButton {
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+    color: #fff
+}
+
+.dropdownnav {
+    background: 0 0;
+    border: none
+}
+
+.spaced-logo-satellite {
+    width: 30%
+}
+
+#closeviewbtn {
+    display: block;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    font-size: 3rem;
+    top: 20px;
+    right: 20px
+}

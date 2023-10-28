@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaced</title>
+    <link rel="stylesheet" href="../css/gallery/index.css">
+    <style>
+        p {
+            color: antiquewhite;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 30px;
+            margin-bottom: -50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(1, 1, 1, 0.885);">
+<div class="menu">
+    <div class="menulogo">
+        <img class="menuimg" src="../img/dropdown.png" alt="" onclick="menu_show()">
+    </div>
+    <div class="allmenus-show" id="allmenus">
+        <input type="hidden" value="0" name="menuStatus" id="menuStatus">
+        <div class="home blur-menu">
+            <a href="../home.html"><img class="menuimg" src="../img/home.png" alt=""></a>
+        </div>
+        <div class="about blur-menu">
+            <a href="../about.html"><img class="menuimg" src="../img/aboutus.png" alt=""></a>
+        </div>
+        <div class="gallery blur-menu">
+            <a href="../gallery.html"><img class="menuimg" src="../img/galleryicon.png" alt=""></a>
+        </div>
+        <div class="missions blur-menu">
+            <a href="../mission.html"><img class="menuimg2" src="../img/mission2.png" alt=""></a>
+        </div>
+    </div>
+</div>
+
+<div class="spacedimg">
+    <img class="spacedlogo spaced-logo-satellite" src="../img/Spaced.png" alt="">
+</div>
+
+
+<!-- menu code ends -->
+
+<div class="container1">
+    <div class="card2" style="position: relative;left: 20px;">
+        <div class="hoverimg">
+            <div class="img">
+                <img src="../img/spitzer1.jpg" alt="" style="height: 350px;">
+                <div class="middle">
+                    <img src="../img/eye.svg" alt="" style="height: 40px;cursor: pointer;"
+                         onclick="fullView('../img/spitzer1.jpg')">
+                </div>
+            </div>
+        </div>
+        <a href="../img/spitzer1.jpg" target="_blank">
+            <button class="satbtn">Download</button>
+        </a>
+    </div>
+
+    <div class="card2" style="position: relative;left: 50px;">
+        <div class="hoverimg">
+            <div class="img">
+                <img src="../img/spitzer2.jpeg" alt="" style="height: 350px;">
+                <div class="middle">
+                    <img src="../img/eye.svg" alt="" style="height: 40px;cursor: pointer;"
+                         onclick="fullView('../img/spitzer2.jpeg')"/>
+                </div>
+            </div>
+        </div>
+        <a href="../img/spitzer2.jpeg" target="_blank">
+            <button class="satbtn">Download</button>
+        </a>
+    </div>
+
+    <div class="card3" style="position: relative;left: 80px;">
+        <div class="hoverimg">
+            <div class="img">
+                <img src="../img/spitzer4.jpg" alt="" style="height: 350px;">
+                <div class="middle">
+                    <img src="../img/eye.svg" alt="" style="height: 40px;cursor: pointer;"
+                         onclick="fullView('../img/spitzer4.jpg')">
+                </div>
+            </div>
+        </div>
+        <a href="../img/spitzer4.jpg" target="_blank">
+            <button class="satbtn">Download</button>
+        </a>
+    </div>
+
+    <div class="card3" style="position: relative;left: 180px;">
+        <div class="hoverimg">
+            <div class="img">
+                <img src="../img/spitzer5.jpg" alt="" style="height: 350px;">
+                <div class="middle">
+                    <img src="../img/eye.svg" alt="" style="height: 40px;cursor: pointer;"
+                         onclick="fullView('../img/spitzer5.jpg')">
+                </div>
+            </div>
+        </div>
+        <a href="../img/spitzer5.jpg" target="_blank">
+            <button class="satbtn">Download</button>
+        </a>
+    </div>
+
+    <div class="card4" style="position: relative;left: 80px;">
+        <div class="hoverimg">
+            <div class="img">
+                <img src="../img/spitzer6.webp" alt="" style="height: 350px;">
+                <div class="middle">
+                    <img src="../img/eye.svg" alt="" style="height: 40px;cursor: pointer;"
+                         onclick="fullView('../img/spitzer6.webp')">
+                </div>
+            </div>
+        </div>
+        <a href="../img/spitzer6.webp" target="_blank">
+            <button class="satbtn">Download</button>
+        </a>
+    </div>
+
+    <div class="card4" style="position: relative;left: 180px;">
+        <div class="hoverimg">
+            <div class="img">
+                <img src="../img/spitzer7.jpg" alt="" style="height: 350px;">
+                <div class="middle">
+                    <img src="../img/eye.svg" alt="" style="height: 40px;" onclick="fullView('../img/spitzer7.jpg')">
+                </div>
+            </div>
+        </div>
+        <a href="../img/spitzer7.jpg" target="_blank">
+            <button class="satbtn">Download</button>
+        </a>
+    </div>
+
+    <!-- fullimage view code -->
+    <dialog id="FullImageView">
+        <img src="" alt="" id="FullImage">
+        <span id="closeviewbtn" onclick="closeFullView()">&times;</span>
+    </dialog>
+
+</div>
+
+<script src="../js/gallery/script.js">
+</script>
+</body>
+</html>
